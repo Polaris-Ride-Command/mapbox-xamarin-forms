@@ -427,8 +427,7 @@ namespace Naxam.Mapbox.Platform.iOS.Extensions
                             return NSExpression.FromFunction("mgl_attributed:", attributedExpressions.ToArray());
                         }
                     case "coalesce": {
-                            var subexpressions = ToSubexpressions(arguments);
-                            return NSExpression.FromFormat("mgl_coalesce(%@)", subexpressions.ToArray());
+                            return NSExpression.FromFormat("mgl_coalesce(%@)", arguments.ToArray());
                         }
                     default: {
                             var subexpressions = ToSubexpressions(objects);

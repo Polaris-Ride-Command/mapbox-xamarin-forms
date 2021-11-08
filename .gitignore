@@ -50,3 +50,4 @@ xam_mapbox_sdk_ios/
 build.props
 adb.props
 aapt2.version
+demo/Droid/Resources/Resource.designer.cs
