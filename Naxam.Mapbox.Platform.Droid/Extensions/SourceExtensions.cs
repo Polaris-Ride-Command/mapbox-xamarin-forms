@@ -11,7 +11,8 @@ using NxTileSet = Naxam.Mapbox.Sources.TileSet;
 using Com.Mapbox.Mapboxsdk.Style.Sources;
 using Newtonsoft.Json;
 using Com.Mapbox.Geojson;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 using ImageSource = Com.Mapbox.Mapboxsdk.Style.Sources.ImageSource;
 
 namespace Naxam.Mapbox.Platform.Droid.Extensions

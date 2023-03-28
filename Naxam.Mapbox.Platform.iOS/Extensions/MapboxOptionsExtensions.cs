@@ -3,7 +3,8 @@ using CoreGraphics;
 using Mapbox;
 using Naxam.Controls.Forms;
 using Naxam.Controls.Mapbox.Platform.iOS;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 
 namespace Naxam.Mapbox.Platform.iOS.Extensions
 {

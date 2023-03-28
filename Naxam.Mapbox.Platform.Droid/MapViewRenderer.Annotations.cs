@@ -11,7 +11,8 @@ using Naxam.Controls.Forms;
 using Naxam.Mapbox;
 using Naxam.Mapbox.Annotations;
 using Naxam.Mapbox.Platform.Droid.Extensions;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 using Xamarin.Forms.Platform.Android;
 using NxAnnotation = Naxam.Mapbox.Annotations.Annotation;
 

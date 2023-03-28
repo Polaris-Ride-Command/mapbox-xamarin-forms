@@ -4,7 +4,8 @@ using Naxam.Controls.Forms;
 using Naxam.Mapbox;
 using Naxam.Mapbox.Layers;
 using Naxam.Mapbox.Sources;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 using Xamarin.Forms.Xaml;
 
 namespace MapBoxQs.Views

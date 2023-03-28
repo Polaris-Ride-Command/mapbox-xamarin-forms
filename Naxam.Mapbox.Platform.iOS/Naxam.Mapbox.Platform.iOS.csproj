@@ -1,149 +1,28 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DDB8E5F0-975B-4CFB-8A72-AE662C0D2E1B}</ProjectGuid>
-    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <OutputType>Library</OutputType>
-    <LangVersion>latest</LangVersion>
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net7.0;net7.0-ios</TargetFrameworks>
     <RootNamespace>Naxam.Mapbox.Platform.iOS</RootNamespace>
     <AssemblyName>Naxam.Mapbox.Platform.iOS</AssemblyName>
-    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchDebug>true</MtouchDebug>
-    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
-    <MtouchFastDev>true</MtouchFastDev>
-    <MtouchProfiling>true</MtouchProfiling>
-    <IOSDebuggerPort>28015</IOSDebuggerPort>
-    <DeviceSpecificBuild>false</DeviceSpecificBuild>
-    <MtouchLink>SdkOnly</MtouchLink>
-    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <DefineConstants>
-    </DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
-    <MtouchLink>SdkOnly</MtouchLink>
-    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug-Reveal|iPhoneSimulator' ">
-    <Optimize>false</Optimize>
-    <OutputPath>bin\iPhoneSimulator\Debug-Reveal</OutputPath>
-    <DefineConstants>
-    </DefineConstants>
-    <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <DeviceSpecificBuild>true</DeviceSpecificBuild>
-    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
-    <MtouchLink>None</MtouchLink>
-    <MtouchArch>i386, x86_64</MtouchArch>
-    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug-Reveal|AnyCPU' ">
-    <Optimize>false</Optimize>
-    <OutputPath>bin\iPhoneSimulator\Debug-Reveal</OutputPath>
-    <DefineConstants>
-    </DefineConstants>
-    <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <DeviceSpecificBuild>true</DeviceSpecificBuild>
-    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
-    <MtouchLink>None</MtouchLink>
-    <MtouchArch>i386, x86_64</MtouchArch>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug-Reveal|iPhone' ">
-    <Optimize>false</Optimize>
-    <OutputPath>bin\iPhoneSimulator\Debug-Reveal</OutputPath>
-    <DefineConstants>
-    </DefineConstants>
-    <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <DeviceSpecificBuild>true</DeviceSpecificBuild>
-    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
-    <MtouchLink>None</MtouchLink>
-    <MtouchArch>i386, x86_64</MtouchArch>
-    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Core" />
-    <Reference Include="Xamarin.iOS" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Extensions\ImageSourceExtensions.cs" />
-    <Compile Include="Extensions\LatLngQuadExtensions.cs" />
-    <Compile Include="Extensions\MapboxOptionsExtensions.cs" />
-    <Compile Include="MapViewRenderer.CurrentView.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MapViewRenderer.cs" />
-    <Compile Include="Extensions\MGLShapeExtensions.cs" />
-    <Compile Include="Extensions\LatLngExtensions.cs" />
-    <Compile Include="Extensions\UIDeviceExtensions.cs" />
-    <Compile Include="MapViewRenderer_StyleLayer.cs" />
-    <Compile Include="Extensions\IMGLOfflineRegionExtensions.cs" />
-    <Compile Include="Extensions\MGLOfflinePackExtensions.cs" />
-    <Compile Include="Extensions\MGLOfflinePackProgressExtensions.cs" />
-    <Compile Include="OfflineStorageService.cs" />
-    <Compile Include="DraggableAnnotationView.cs" />
-    <Compile Include="MGLCustomCalloutView.cs" />
-    <Compile Include="Extensions\NativeViewExtensions.cs" />
-    <Compile Include="MapViewRenderer.Annotations.cs" />
-    <Compile Include="MapViewRenderer.Style.cs" />
-    <Compile Include="MapViewRenderer.Interactor.cs" />
-    <Compile Include="Extensions\FeatureExtensions.cs" />
-    <Compile Include="MapViewRenderer.Style.Layers.cs" />
-    <Compile Include="Extensions\SourceExtensions.cs" />
-    <Compile Include="MapViewRenderer.Style.Sources.cs" />
-    <Compile Include="Extensions\ExpressionExtensions.cs" />
-    <Compile Include="Extensions\LayerExtensions.cs" />
-    <Compile Include="Extensions\GeoJsonOptionsExtensions.cs" />
-    <Compile Include="XObjC.cs" />
-    <Compile Include="MapViewRenderer.Building.cs" />
-    <Compile Include="MapViewRenderer.Traffic.cs" />
-    <Compile Include="Extensions\ThicknessExtensions.cs" />
-    <Compile Include="Extensions\TileSourceOptionsExtensions.cs" />
-  </ItemGroup>
-  <ItemGroup>
+
+  <!-- <ItemGroup>
     <ProjectReference Include="..\Naxam.Mapbox.Forms\Naxam.Mapbox.Forms.csproj">
       <Project>{EBB04763-2E36-4D2C-94C9-351FBACE3C83}</Project>
       <Name>Naxam.Mapbox.Forms</Name>
     </ProjectReference>
-  </ItemGroup>
+  </ItemGroup> -->
+
+
+
   <ItemGroup>
-    <None Include="Entitlements.plist" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Naxam.Mapbox.iOS">
+    <!-- <PackageReference Include="Naxam.Mapbox.iOS">
       <Version>5.4.0</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Forms">
-      <Version>4.5.0.530</Version>
-    </PackageReference>
+    </PackageReference> -->
+
     <PackageReference Include="GeoJSON.Net">
       <Version>1.2.15</Version>
     </PackageReference>
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  
 </Project>

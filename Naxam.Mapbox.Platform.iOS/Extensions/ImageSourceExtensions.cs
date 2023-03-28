@@ -1,5 +1,6 @@
 using UIKit;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 using Xamarin.Forms.Platform.iOS;
 
 namespace Naxam.Mapbox.Platform.iOS.Extensions

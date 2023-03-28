@@ -8,7 +8,8 @@ using Naxam.Mapbox;
 using Naxam.Mapbox.Layers;
 using Naxam.Mapbox.Sources;
 using Plugin.Permissions.Abstractions;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 using Xamarin.Forms.Xaml;
 using Point = Xamarin.Forms.Point;
 

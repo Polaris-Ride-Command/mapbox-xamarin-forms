@@ -1,6 +1,7 @@
 using System;
 using Naxam.Mapbox;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 
 namespace Naxam.Controls.Forms
 {

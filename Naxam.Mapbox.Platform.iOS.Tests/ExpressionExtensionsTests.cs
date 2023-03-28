@@ -2,7 +2,8 @@
 using Naxam.Mapbox.Expressions;
 using Naxam.Mapbox.Platform.iOS.Extensions;
 using NUnit.Framework;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 
 namespace Naxam.Mapbox.Platform.iOS.Tests
 {

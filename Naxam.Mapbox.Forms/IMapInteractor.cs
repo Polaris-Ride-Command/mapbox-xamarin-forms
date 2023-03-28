@@ -3,7 +3,8 @@ using GeoJSON.Net;
 using GeoJSON.Net.Feature;
 using Naxam.Mapbox.Annotations;
 using Naxam.Mapbox.Layers;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 using NFeature = GeoJSON.Net.Feature.Feature;
 
 namespace Naxam.Mapbox

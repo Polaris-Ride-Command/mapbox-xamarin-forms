@@ -9,7 +9,8 @@ using Naxam.Mapbox.Sources;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 
 namespace MapBoxQs.Views
 {

@@ -3,7 +3,8 @@ using System.Linq;
 using Naxam.Controls.Forms;
 using Naxam.Mapbox;
 using Naxam.Mapbox.Annotations;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 using Xamarin.Forms.Xaml;
 
 namespace MapBoxQs.Views

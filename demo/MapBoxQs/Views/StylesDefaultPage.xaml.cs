@@ -3,7 +3,8 @@ using MapBoxQs.Services;
 using Naxam.Controls.Forms;
 using Naxam.Mapbox;
 using System.Linq;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 
 namespace MapBoxQs.Views
 {

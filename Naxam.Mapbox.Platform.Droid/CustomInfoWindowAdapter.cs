@@ -1,7 +1,8 @@
 ﻿using System.Linq;
 using Android.Content;
 using Com.Mapbox.Mapboxsdk.Annotations;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 using static Com.Mapbox.Mapboxsdk.Maps.MapboxMap;
 using Android.Widget;
 
