@@ -13,12 +13,12 @@ using Naxam.Controls.Mapbox.Platform.iOS;
 using UIKit;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
-using Xamarin.Forms.Platform.iOS;
 using ObjCRuntime;
 using Naxam.Mapbox;
 using Naxam.Mapbox.Platform.iOS.Extensions;
+using Microsoft.Maui.Controls.Compatibility.Platform.iOS;
+using Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;
 
-[assembly: ExportRenderer(typeof(MapView), typeof(MapViewRenderer))]
 namespace Naxam.Controls.Mapbox.Platform.iOS
 {
     public partial class MapViewRenderer : ViewRenderer<MapView, MGLMapView>, IMGLMapViewDelegate, IUIGestureRecognizerDelegate

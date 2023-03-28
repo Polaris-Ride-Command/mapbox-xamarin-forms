@@ -7,7 +7,7 @@ namespace Naxam.Mapbox
 {
     public class BuildingInfo
     {
-        public Color Color { get; set; } = Color.LightGray;
+        public Color Color { get; set; } = Colors.LightGray;
 
         public float Opacity { get; set; } = 0.6f;
 

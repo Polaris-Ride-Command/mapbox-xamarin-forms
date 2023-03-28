@@ -6,6 +6,7 @@ using Naxam.Mapbox.Layers;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 using NFeature = GeoJSON.Net.Feature.Feature;
+using Microsoft.Maui.Controls.Shapes;
 
 namespace Naxam.Mapbox
 {

@@ -1,14 +1,16 @@
 using System.IO;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 
 namespace Naxam.Mapbox.Sources
 {
     public class MapboxImageSource : Source
     {
-        public Xamarin.Forms.ImageSource Source { get; private set; }
+        public ImageSource Source { get; private set; }
 
         public LatLngQuad Coordinates { get;  private set; }
 
-        public MapboxImageSource(string id, LatLngQuad coordinates, Xamarin.Forms.ImageSource source)
+        public MapboxImageSource(string id, LatLngQuad coordinates, ImageSource source)
         {
             Id = id;
             Coordinates = coordinates;
