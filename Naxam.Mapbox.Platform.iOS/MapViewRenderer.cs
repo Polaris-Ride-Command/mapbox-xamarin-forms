@@ -18,6 +18,8 @@ using Naxam.Mapbox;
 using Naxam.Mapbox.Platform.iOS.Extensions;
 using Microsoft.Maui.Controls.Compatibility.Platform.iOS;
 using Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;
+using Microsoft.Maui.Controls.Platform;
+using PropertyChangingEventArgs = Microsoft.Maui.Controls.PropertyChangingEventArgs;
 
 namespace Naxam.Controls.Mapbox.Platform.iOS
 {
@@ -147,7 +149,7 @@ namespace Naxam.Controls.Mapbox.Platform.iOS
             }
         }
 
-        protected void OnElementPropertyChanging(object sender, Xamarin.Forms.PropertyChangingEventArgs e)
+        protected void OnElementPropertyChanging(object sender, PropertyChangingEventArgs e)
         {
             if (Element == null) return;
             if (e.PropertyName == MapView.AnnotationsProperty.PropertyName) {
@@ -236,7 +238,7 @@ namespace Naxam.Controls.Mapbox.Platform.iOS
                     var touchedCooridinate = map.ConvertPoint(point, map);
                     var position = new LatLng(touchedCooridinate.Latitude, touchedCooridinate.Longitude);
 
-                    (LatLng, Point) commandParamters = (position, new Point(point.X, point.Y));
+                    (LatLng, Microsoft.Maui.Graphics.Point) commandParamters = (position, new Microsoft.Maui.Graphics.Point(point.X, point.Y));
 
                     if (Element.DidTapOnMapCommand?.CanExecute(commandParamters) == true) {
                         Element.DidTapOnMapCommand.Execute(commandParamters);
