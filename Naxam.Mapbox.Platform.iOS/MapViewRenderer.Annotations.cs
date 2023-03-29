@@ -19,7 +19,7 @@ namespace Naxam.Controls.Mapbox.Platform.iOS
     {
         public void UpdateAnnotation(Annotation annotation)
         {
-            var native = map.Annotations.FirstOrDefault(x => x.Handle.ToInt64().ToString() == annotation.Id);
+            var native = map.Annotations.FirstOrDefault(x => x.Handle.ToString() == annotation.Id);
             if (native == null) return;
             
             switch (annotation)
@@ -37,7 +37,8 @@ namespace Naxam.Controls.Mapbox.Platform.iOS
             if (shape != null)
             {
                 map.AddAnnotation(shape);
-                annotation.Id = shape.Handle.ToInt64().ToString();
+                //annotation.Id = shape.Handle.ToInt64().ToString();
+                annotation.Id = shape.Handle.ToString();
             }
         }
 
