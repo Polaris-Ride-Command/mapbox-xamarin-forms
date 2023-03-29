@@ -1,7 +1,9 @@
 using UIKit;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
-using Xamarin.Forms.Platform.iOS;
+using Microsoft.Maui.Controls.Compatibility.Platform.iOS;
+using Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;
+using Microsoft.Maui.Controls.Platform;
 
 namespace Naxam.Mapbox.Platform.iOS.Extensions
 {
@@ -9,11 +11,11 @@ namespace Naxam.Mapbox.Platform.iOS.Extensions
     {
         public static UIImage GetImage(this ImageSource source)
         {
-            var handler =  Xamarin.Forms.Internals.Registrar.Registered
-                .GetHandlerForObject<IImageSourceHandler>(source);
+            //var handler =  IImageSourceHandler  (source);
+            var handler = source.Handler.MauiContext;
 
-            return handler?
-                .LoadImageAsync(source).Result;
+
+            return source.GetPlatformImageAsync(handler).Result.Value;
         }
     }
 }

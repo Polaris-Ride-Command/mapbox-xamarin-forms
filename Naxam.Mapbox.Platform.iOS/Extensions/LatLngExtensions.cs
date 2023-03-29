@@ -3,6 +3,8 @@ using System.Linq;
 using CoreGraphics;
 using CoreLocation;
 using Mapbox;
+using Microsoft.Maui.Controls.Shapes;
+using Microsoft.Maui.Graphics;
 using Naxam.Mapbox;
 
 namespace Naxam.Controls.Mapbox.Platform.iOS
@@ -71,7 +73,7 @@ namespace Naxam.Controls.Mapbox.Platform.iOS
                 );
         }
 
-        public static CGRect ToRect(this Xamarin.Forms.Rectangle rectangle)
+        public static CGRect ToRect(this Rect rectangle)
         {
             return CGRect.FromLTRB(
                (nfloat)rectangle.Left,
@@ -81,7 +83,7 @@ namespace Naxam.Controls.Mapbox.Platform.iOS
             );
         }
 
-        public static CGPoint ToPoint(this Xamarin.Forms.Point tl)
+        public static CGPoint ToPoint(this Point tl)
         {
             return new CGPoint(tl.X, tl.Y);
         }

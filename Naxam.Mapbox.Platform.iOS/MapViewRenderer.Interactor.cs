@@ -10,6 +10,7 @@ using Mapbox;
 using CoreAnimation;
 using CoreGraphics;
 using UIKit;
+using Microsoft.Maui.Graphics;
 
 namespace Naxam.Controls.Mapbox.Platform.iOS
 {
@@ -58,7 +59,7 @@ namespace Naxam.Controls.Mapbox.Platform.iOS
             return features.Select(f => f.ToFeature(true)).ToArray();
         }
 
-        public Feature[] QueryFeatures(Rectangle rectangle, params string[] layers)
+        public Feature[] QueryFeatures(Rect rectangle, params string[] layers)
         {
             var rect = rectangle.ToRect();
             var features = map.VisibleFeaturesInRect(rect, layers);

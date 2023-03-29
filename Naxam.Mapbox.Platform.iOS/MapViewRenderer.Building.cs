@@ -2,13 +2,22 @@ using Naxam.Mapbox;
 using Naxam.Mapbox.Platform.iOS.Extensions;
 using Mapbox;
 using Foundation;
-using Xamarin.Forms.Platform.iOS;
+using Microsoft.Maui.Controls.Compatibility.Platform.iOS;
+using Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;
 using Naxam.Mapbox.Expressions;
+using GeoJSON.Net.Feature;
+using Microsoft.Maui.Graphics;
+using Microsoft.Maui.Controls.Shapes;
 
 namespace Naxam.Controls.Mapbox.Platform.iOS
 {
     public partial class MapViewRenderer : IMapFunctions
     {
+        public Feature[] QueryFeatures(Rectangle rectangle, params string[] layers)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public void ShowBuilding(BuildingInfo buildingInfo)
         {
             if (map == null || mapStyle == null) return;

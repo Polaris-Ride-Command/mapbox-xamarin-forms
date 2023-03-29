@@ -3,14 +3,18 @@ using CoreGraphics;
 using UIKit;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
-using Xamarin.Forms.Platform.iOS;
+using Microsoft.Maui.Controls.Compatibility.Platform.iOS;
+using Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;
+using Microsoft.Maui.Controls.Platform;
 
 using RectangleF = CoreGraphics.CGRect;
 using SizeF = CoreGraphics.CGSize;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Platform;
 
 namespace Naxam.Mapbox.Platform.iOS.Extensions
 {
-    using Platform = Xamarin.Forms.Platform.iOS.Platform;
+    using Platform = Microsoft.Maui.Controls.Compatibility.Platform.iOS.Platform;
 
     public static class NativeViewExtensions
     {
@@ -31,13 +35,14 @@ namespace Naxam.Mapbox.Platform.iOS.Extensions
             renderer.NativeView.Frame = frame;
             renderer.NativeView.AutoresizingMask = UIViewAutoresizing.All;
             renderer.NativeView.ContentMode = UIViewContentMode.ScaleToFill;
-            renderer.Element.Layout(frame.ToRectangle());
+            var recVal = Microsoft.Maui.Controls.Compatibility.Platform.iOS.RectangleExtensions.ToRectangle(frame);
+            renderer.Element.Layout(recVal);
             var nativeView = renderer.NativeView;
             nativeView.SetNeedsLayout();
             return nativeView;
         }
 
-        public static UIView DataTemplateToNativeView(this Xamarin.Forms.DataTemplate dt, object bindingContext, Xamarin.Forms.View rootView)
+        public static UIView DataTemplateToNativeView(this DataTemplate dt, object bindingContext, View rootView)
         {
             if (dt == null) return null;
             object content = (dt is DataTemplateSelector dts)
@@ -95,8 +100,8 @@ namespace Naxam.Mapbox.Platform.iOS.Extensions
 
             var contentFrame = Frame;
             var view = View;
-
-            Layout.LayoutChildIntoBoundingRegion(view, contentFrame.ToRectangle());
+            var rectVal = Microsoft.Maui.Controls.Compatibility.Platform.iOS.RectangleExtensions.ToRectangle(contentFrame);
+            Microsoft.Maui.Controls.Compatibility.Layout.LayoutChildIntoBoundingRegion(view, rectVal);
 
             if (_rendererRef == null)
                 return;
@@ -179,7 +184,8 @@ namespace Naxam.Mapbox.Platform.iOS.Extensions
                 //{
                 //when cells are getting reused the element could be already set to another cell
                 //so we should dispose based on the renderer and not the renderer.Element
-                var platform = renderer.Element.Platform as Platform;
+                //var platform = renderer.Element.Platform as Platform;
+                var platform = renderer.Element.ToPlatform(renderer.Element.Handler.MauiContext); // as Platform;
 
                 // TODO DisposeRendererAndChildren
                 // platform.DisposeRendererAndChildren(renderer);
