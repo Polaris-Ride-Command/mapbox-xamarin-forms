@@ -12,11 +12,11 @@ using Naxam.Mapbox.Sources;
 using Newtonsoft.Json;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
-using Xamarin.Forms.Xaml;
+
 
 namespace MapBoxQs.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+      
     public partial class DdsHeatmap : ContentPage
     {
         private static readonly string EARTHQUAKE_SOURCE_URL = "https://www.mapbox.com/mapbox-gl-js/assets/earthquakes.geojson";

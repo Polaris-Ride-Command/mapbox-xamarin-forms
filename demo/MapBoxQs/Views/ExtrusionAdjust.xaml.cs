@@ -9,11 +9,11 @@ using Naxam.Mapbox.Layers;
 using Naxam.Mapbox.Sources;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
-using Xamarin.Forms.Xaml;
+
 
 namespace MapBoxQs.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+      
     public partial class ExtrusionAdjust : ContentPage
     {
         public ExtrusionAdjust()
@@ -36,7 +36,7 @@ namespace MapBoxQs.Views
                 SourceLayer = "building",
                 Filter = Expression.Eq(Expression.Get("extrude"), "true"),
                 MinZoom = 15,
-                FillExtrusionColor = Color.LightGray,
+                FillExtrusionColor = Colors.LightGray,
                 FillExtrusionHeight = Expression.Interpolate(
                     Expression.Exponential(1f),
                     Expression.Zoom(),
@@ -76,7 +76,7 @@ namespace MapBoxQs.Views
             
             map.Functions.UpdateLight(new Light
             {
-                Color = isRedColor ? Color.Red : Color.Blue
+                Color = isRedColor ? Colors.Red : Colors.Blue
             });
         }
         

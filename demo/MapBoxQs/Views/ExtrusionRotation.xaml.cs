@@ -6,11 +6,11 @@ using Naxam.Mapbox.Layers;
 using Naxam.Mapbox.Sources;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
-using Xamarin.Forms.Xaml;
+
 
 namespace MapBoxQs.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+      
     public partial class ExtrusionRotation : ContentPage
     {
         public ExtrusionRotation()
@@ -28,7 +28,7 @@ namespace MapBoxQs.Views
         private void HandleStyleLoaded(MapStyle obj)
         {
             map.Functions.ShowBuilding(new BuildingInfo() {
-                Color = Color.LightGray,
+                Color = Colors.LightGray,
                 Opacity = 0.6f,
                 MinZoomLevel = 15,
                 IsVisible = true

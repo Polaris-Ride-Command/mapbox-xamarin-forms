@@ -5,11 +5,11 @@ using Naxam.Mapbox.Layers;
 using Naxam.Mapbox.Sources;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
-using Xamarin.Forms.Xaml;
+
 
 namespace MapBoxQs.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+      
     public partial class StylesHillshading : ContentPage
     {
         public StylesHillshading()
@@ -36,7 +36,7 @@ namespace MapBoxQs.Views
             // Create and style a hillshade layer to add to the map
             var hillshadeLayer = new HillshadeLayer(LAYER_ID, SOURCE_ID) {
                 HillshadeHighlightColor = Color.FromHex(HILLSHADE_HIGHLIGHT_COLOR),
-                HillshadeShadowColor = Color.Black
+                HillshadeShadowColor = Colors.Black
             };
 
             // Add the hillshade layer to the map

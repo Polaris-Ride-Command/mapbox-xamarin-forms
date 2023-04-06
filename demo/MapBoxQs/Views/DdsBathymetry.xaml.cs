@@ -9,11 +9,10 @@ using Naxam.Mapbox.Sources;
 using Newtonsoft.Json;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
-using Xamarin.Forms.Xaml;
 
 namespace MapBoxQs.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+      
     public partial class DdsBathymetry : ContentPage
     {
         private const string GEOJSON_SOURCE_ID = "GEOJSON_SOURCE_ID";
@@ -76,7 +75,7 @@ namespace MapBoxQs.Views
             {
                 TextField = Expression.Get("depth"),
                 TextSize = 17f,
-                TextColor = Color.White,
+                TextColor = Colors.White,
                 TextAllowOverlap = true
             };
             // Only display Point Features in this layer

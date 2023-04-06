@@ -3,7 +3,6 @@ using Naxam.Controls.Forms;
 using Naxam.Mapbox;
 using Shiny;
 using Shiny.Infrastructure;
-using Shiny.Jobs;
 using Shiny.Net.Http;
 using System;
 using System.Collections.Generic;
@@ -11,14 +10,17 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+#if ANDROID
+using Shiny.Jobs;
+#endif
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
-using Xamarin.Forms.Xaml;
+using System.Net;
+
 
 namespace MapBoxQs.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+      
     public partial class OfflineSideloadOfflineMapPage : ContentPage
     {
         private IOfflineStorageService offlineService;
@@ -35,7 +37,7 @@ namespace MapBoxQs.Views
 
             offlineService = DependencyService.Get<IOfflineStorageService>();
 
-            MessagingCenter.Subscribe<MyTransferDelegate, HttpTransfer>(this, "UPLOAD_DONE", (sender, e) => {
+            MessagingCenter.Subscribe<MyTransferDelegate, IHttpTransfer>(this, "UPLOAD_DONE", (sender, e) => {
                 Device.BeginInvokeOnMainThread(async () =>
                 {
                     txtMerge.Text = "Downloaded. Merging...";
@@ -70,7 +72,9 @@ namespace MapBoxQs.Views
 
             var downloadUrl = "https://filebin.net/rpe758rx4pr9ok69/Hanoi.db?t=xj7xw5te";
 
-            var transferManager = ShinyHost.Resolve<IHttpTransferManager>();
+            //var transferManager = ShinyHost.Resolve<IHttpTransferManager>();
+
+            var transferManager = MauiProgram.Services.GetRequiredService<IHttpTransferManager>();
 
             var localPath = Path.Combine(Xamarin.Essentials.FileSystem.AppDataDirectory, "mapbox-cache.db");
 
@@ -79,29 +83,29 @@ namespace MapBoxQs.Views
                 File.Delete(localPath);
             }
 
-            var result = await transferManager.Enqueue(new HttpTransferRequest(downloadUrl, localPath));
+            var result = await transferManager.Queue(new HttpTransferRequest(downloadUrl, false, localPath));
 
-            transferManager
-                .WhenUpdated()
-                .WithMetrics()
-                .Subscribe(metric =>
-                {
-                    System.Diagnostics.Debug.WriteLine($"Remaning: {metric.EstimatedTimeRemaining} - Speed: {metric.BytesPerSecond}b/s");
-                });
+            //transferManager
+            //    .WhenUpdated()
+            //    .WithMetrics()
+            //    .Subscribe(metric =>
+            //    {
+            //        System.Diagnostics.Debug.WriteLine($"Remaning: {metric.EstimatedTimeRemaining} - Speed: {metric.BytesPerSecond}b/s");
+            //    });
         }
     }
 
     public class MyTransferDelegate : IHttpTransferDelegate
     {
-        public Task OnCompleted(HttpTransfer transfer)
+        public Task OnCompleted(IHttpTransfer transfer)
         {
             return Task.Run(() =>
             {
-                Xamarin.Forms.MessagingCenter.Send(this, "UPLOAD_DONE", transfer);
+                MessagingCenter.Send(this, "UPLOAD_DONE", transfer);
             });
         }
 
-        public Task OnError(HttpTransfer transfer, Exception ex)
+        public Task OnError(IHttpTransfer transfer, Exception ex)
         {
             return Task.Run(() =>
             {
@@ -111,11 +115,24 @@ namespace MapBoxQs.Views
         }
     }
 
-    public class MyStartup : ShinyStartup
+
+
+    //public class MyStartup : ShinyStartup
+    //{
+    //    public override void ConfigureServices(IServiceCollection services)
+    //    {
+    //        services.UseHttpTransfers<MyTransferDelegate>();
+    //    }
+    //}
+
+#if ANDROID
+public partial class MyHttpTransferDelegate : IAndroidForegroundServiceDelegate
+{
+    public void Configure(AndroidX.Core.App.NotificationCompat.Builder builder)
     {
-        public override void ConfigureServices(IServiceCollection services)
-        {
-            services.UseHttpTransfers<MyTransferDelegate>();
-        }
+        
     }
+}
+#endif
+
 }

@@ -2,12 +2,12 @@
     version="1.0"
     encoding="utf-8"?>
 <ContentPage
-    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:nx="clr-namespace:Naxam.Controls.Forms;assembly=Naxam.Mapbox.Forms"
-    xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:ff="clr-namespace:FFImageLoading.Maui;assembly=FFImageLoading.Compat.Maui"
     mc:Ignorable="d"
     x:Class="MapBoxQs.Views.StylesTransparentRenderSurface">
     <Grid>

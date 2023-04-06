@@ -14,11 +14,11 @@ using Naxam.Mapbox.Sources;
 using Newtonsoft.Json;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
-using Xamarin.Forms.Xaml;
+
 
 namespace MapBoxQs.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+      
     public partial class DdsExpressionIntegration : ContentPage
     {
         private const string GEOJSON_SRC_ID = "extremes_source_id";
@@ -161,7 +161,7 @@ namespace MapBoxQs.Views
                 TextField = (GetTemperatureValue()),
                 TextSize = (17f),
                 TextOffset = (new float[] { 0f, -1.75f }),
-                TextColor = (Color.Red),
+                TextColor = (Colors.Red),
                 TextAllowOverlap = (true),
                 TextIgnorePlacement = (true),
                 IconAllowOverlap = (true),
@@ -177,7 +177,7 @@ namespace MapBoxQs.Views
                 TextField = GetTemperatureValue(),
                 TextSize = 17f,
                 TextOffset = (new float[] { 0f, -2.5f }),
-                TextColor = Color.Blue,
+                TextColor = Colors.Blue,
                 TextAllowOverlap = true,
                 TextIgnorePlacement = true,
                 IconAllowOverlap = true,

@@ -10,11 +10,11 @@ using Naxam.Mapbox.Sources;
 using Newtonsoft.Json;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
-using Xamarin.Forms.Xaml;
+
 
 namespace MapBoxQs.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+      
     public partial class DdsInfoWindowSymbol : ContentPage
     {
         private const string GEOJSON_FILE = "MapBoxQs.geojson.us_west_coast.geojson";

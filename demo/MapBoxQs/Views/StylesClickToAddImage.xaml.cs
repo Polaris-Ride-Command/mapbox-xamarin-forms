@@ -7,15 +7,18 @@ using Naxam.Controls.Forms;
 using Naxam.Mapbox;
 using Naxam.Mapbox.Layers;
 using Naxam.Mapbox.Sources;
+using Plugin.Media.Abstractions;
 using Plugin.Permissions.Abstractions;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
-using Xamarin.Forms.Xaml;
-using Point = Xamarin.Forms.Point;
+
+using Point = Microsoft.Maui.Graphics.Point;
+using PermissionStatus = Plugin.Permissions.Abstractions.PermissionStatus;
+using Permissions = Plugin.Permissions.Abstractions.Permission;
 
 namespace MapBoxQs.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+      
     public partial class StylesClickToAddImage : ContentPage
     {
         string ID_IMAGE_SOURCE = "source-id";
@@ -53,9 +56,9 @@ namespace MapBoxQs.Views
 
             if (_features.Count == 4 && map.Functions != null)
             {
-                var result = await Plugin.Permissions.CrossPermissions.Current.RequestPermissionsAsync(Permission.Photos);
+                var result = await Plugin.Permissions.CrossPermissions.Current.RequestPermissionsAsync(Permissions.Photos);
 
-                if (result[Permission.Photos] != PermissionStatus.Granted) return;
+                if (result[Permissions.Photos] != PermissionStatus.Granted) return;
                 
                 var media = await Plugin.Media.CrossMedia.Current.PickPhotoAsync();
                 if (media != null)

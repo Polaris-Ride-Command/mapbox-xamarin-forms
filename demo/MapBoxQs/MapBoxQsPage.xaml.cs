@@ -1,7 +1,8 @@
 ﻿using Microsoft.Maui;
 using Microsoft.Maui.Controls;
-using Xamarin.Forms.PlatformConfiguration;
-using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
+//using Microsoft.Maui.Controls.Compatibility.Platform.iOS;
+using Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;
+using Microsoft.Maui.Controls.Platform;
 
 namespace MapBoxQs
 {
@@ -10,7 +11,9 @@ namespace MapBoxQs
         public MapBoxQsPage()
         {
             var viewModel = new MainPageViewModel(Navigation);
-            On<iOS>().SetUseSafeArea(true);
+//#if iOS
+//            SetUseSafeArea(true);
+//#endif
             BindingContext = viewModel;
             InitializeComponent();
         }

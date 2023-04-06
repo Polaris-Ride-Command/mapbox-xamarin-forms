@@ -10,11 +10,11 @@ using Naxam.Mapbox.Sources;
 using Newtonsoft.Json;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
-using Xamarin.Forms.Xaml;
+
 
 namespace MapBoxQs.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+      
     public partial class DdsMultipleHeatmapStyling : ContentPage
     {
         private static readonly string HEATMAP_SOURCE_ID = "HEATMAP_SOURCE_ID";

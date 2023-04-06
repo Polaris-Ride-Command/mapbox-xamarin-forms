@@ -10,11 +10,11 @@ using Naxam.Mapbox.Sources;
 using Newtonsoft.Json;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
-using Xamarin.Forms.Xaml;
+
 
 namespace MapBoxQs.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+      
     public partial class DdsChoroplethJsonVectorMix : ContentPage
     {
         private const string STATE_UNEMPLOYMENT_INFO_JSON_FILE = "MapBoxQs.geojson.state_unemployment_info.json";

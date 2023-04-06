@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
-using Xamarin.Forms.Xaml;
+
 
 using GeoJSON.Net.Feature;
 using GeoJSON.Net.Geometry;
@@ -18,7 +18,7 @@ using Naxam.Mapbox.Sources;
 
 namespace MapBoxQs.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+      
     public partial class StylesColorDependentOnRoomLevelPage : ContentPage
     {
         public StylesColorDependentOnRoomLevelPage()

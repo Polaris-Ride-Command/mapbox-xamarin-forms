@@ -1,19 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>net7.0-ios;net7.0-android</TargetFrameworks>
+    <UseMaui>True</UseMaui>
+	  <OutputType>Library</OutputType>
+	  <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="examples.json" />
-    <None Remove="sample_route_trip.geojson" />
-    <None Remove="geojson\example.geojson" />
-    <None Remove="geojson\state_unemployment_info.json" />
-    <None Remove="geojson\weather_data_per_state_before2006.geojson" />
-    <None Remove="geojson\us_west_coast.geojson" />
-    <None Remove="geojson\icon_rotate_and_alignment.json" />
-  </ItemGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
+    <CreatePackage>false</CreatePackage>
+  </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="examples.json" />
     <EmbeddedResource Include="sample_route_trip.geojson" />
@@ -27,109 +24,28 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Acr.UserDialogs" Version="7.1.0.442" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="Xam.Plugin.Media" Version="5.0.1" />
-    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
-    <PackageReference Include="Xamarin.Forms" Version="4.5.0.530" />
-    <PackageReference Include="Rg.Plugins.Popup" Version="1.2.0.223" />
-    <PackageReference Include="GeoJSON.Net" Version="1.2.15" />
-    <PackageReference Include="Shiny.Net.Http" Version="1.1.0.1473" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.2" />
-    <PackageReference Include="DryIoc" Version="4.1.4" />
+    <Folder Include="geojson\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs" Version="8.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Xam.Plugin.Media" Version="5.0.1" />
+    <PackageReference Include="Mopups" Version="1.1.1" />
+    <PackageReference Include="GeoJSON.Net" Version="1.2.19" />
+    <PackageReference Include="DryIoc" Version="5.3.4" />
+    <PackageReference Include="Shiny.Net.Http" Version="3.0.0-alpha-0560" />
+    <PackageReference Include="FFImageLoading.Compat.Svg" Version="3.999.0-ci4507452544" />
+    <PackageReference Include="FFImageLoading.Compat.Maui" Version="3.999.0-ci4507452544" />
+    <PackageReference Include="FFImageLoading.Compat" Version="3.999.0-ci4507452544" />
+    <PackageReference Include="FFImageLoading.Compat.Svg.Maui" Version="3.999.0-ci4507452544" />
+    <PackageReference Include="FFImageLoading.Transformations" Version="3.999.0-ci4507452544" />
+    <PackageReference Include="Shiny.Core" Version="3.0.0-alpha-0560" />
+    <PackageReference Include="Shiny" Version="3.0.0-alpha-0002" />
+    <PackageReference Include="Plugin.Permissions" Version="6.0.1" />
+    <PackageReference Include="Shiny.Framework" Version="3.0.0-alpha-0065" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Naxam.Mapbox.Forms\Naxam.Mapbox.Forms.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-	<Compile Update="App.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-	<Compile Update="AppShell.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-	<Compile Update="MapBoxQsPage.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-	<Compile Update="Views\StylesChangeLayerOpacityPage.xaml.cs">
-	  <DependentUpon>StylesChangeLayerOpacityPage.xaml</DependentUpon>
-	</Compile>
-	<Compile Update="Views\StylesChangeLayerColorPage.xaml.cs">
-	  <DependentUpon>StylesChangeLayerColorPage.xaml</DependentUpon>
-	</Compile>
-	<Compile Update="Views\StylesLayerBelowLabelsPage.xaml.cs">
-	  <DependentUpon>StylesLayerBelowLabelsPage.xaml</DependentUpon>
-	</Compile>
-	<Compile Update="Views\StylesWebMapServiceLayerPage.xaml.cs">
-	  <DependentUpon>StylesWebMapServiceLayerPage.xaml</DependentUpon>
-	</Compile>
-	<Compile Update="Views\StylesVectorLayerPage.xaml.cs">
-	  <DependentUpon>StylesVectorLayerPage.xaml</DependentUpon>
-	</Compile>
-	<Compile Update="Views\StylesSymbolLayerIconsPage.xaml.cs">
-	  <DependentUpon>StylesSymbolLayerIconsPage.xaml</DependentUpon>
-	</Compile>
-	<Compile Update="Views\StylesDefaultPage.xaml.cs">
-	  <DependentUpon>StylesDefaultPage.xaml</DependentUpon>
-	</Compile>
-	<Compile Remove="Views\StylesStylesMissingIcon.xaml.cs" />
-	<Compile Update="Views\StylesPopulationDensityExtrusion.xaml.cs">
-	  <DependentUpon>ExtrusionPopulationDensityExtrusion.xaml</DependentUpon>
-	</Compile>
-	<Compile Remove="Views\ExtrusionRotation %28copy%29.xaml.cs" />
-	<Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\PluginSymbolListener.xaml.cs">
-	  <DependentUpon>PluginSymbolListener.xaml</DependentUpon>
-	</Compile>
-	<Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\PluginTraffic.xaml.cs">
-	  <DependentUpon>PluginTraffic.xaml</DependentUpon>
-	</Compile>
-	<Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\PluginBuilding.xaml.cs">
-	  <DependentUpon>PluginBuilding.xaml</DependentUpon>
-	</Compile>
-	<Compile Remove="Views\PluginBuilding %28copy%29.xaml.cs" />
-	<Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\PluginBuilding %28copy%29.xaml.cs">
-	  <DependentUpon>PluginBuilding.xaml</DependentUpon>
-	  <SubType>Code</SubType>
-	</Compile>
-	<Compile Remove="Views\DdsChoroplethZoomChange %28copy%29.xaml.cs" />
-	<Compile Remove="Views\DdsChoroplethJsonVectorMix %28copy%29.xaml.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="App.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="AppShell.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="MapBoxQsPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\HomePage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\OfflineSimpleOfflineMapPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\ShowPhotoDialog.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\StylesColorDependentOnRoomLevelPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\StylesLanguageSwitchPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\StylesLineLayerPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\StylesSymbolLayerIconSizeChangePage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup> 
-  <ItemGroup>
-    <Folder Include="geojson\" />
   </ItemGroup>
 </Project>

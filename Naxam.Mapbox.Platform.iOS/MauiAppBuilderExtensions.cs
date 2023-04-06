@@ -16,10 +16,18 @@ namespace Naxam.Mapbox.Platform.iOS
                 {
                     handlers.AddHandler(typeof(MapView), typeof(MapViewRenderer));
 
-                })
-                .Services.AddSingleton<IOfflineStorageService,OfflineStorageService>();
+                });
+
+                builder.Services.RegisterServices();
 
             return builder;
+        }
+
+        public static void RegisterServices(this IServiceCollection services)
+        {
+            services.AddSingleton<IOfflineStorageService, OfflineStorageService>();
+
+            services.AddSingleton<IMapFunctions, MapViewRenderer>();
         }
     }
 }

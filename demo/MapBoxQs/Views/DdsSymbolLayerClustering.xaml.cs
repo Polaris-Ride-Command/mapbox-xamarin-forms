@@ -11,11 +11,11 @@ using Naxam.Mapbox.Sources;
 using Newtonsoft.Json;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
-using Xamarin.Forms.Xaml;
+
 
 namespace MapBoxQs.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+      
     public partial class DdsSymbolLayerClustering : ContentPage
     {
         public DdsSymbolLayerClustering()
@@ -106,7 +106,7 @@ namespace MapBoxQs.Views
             {
                 TextField = (Expression.ToString(Expression.Get("point_count"))),
                 TextSize = (12f),
-                TextColor = (Color.Black),
+                TextColor = (Colors.Black),
                 TextIgnorePlacement = (true),
                 // The .5f offset moves the data numbers down a little bit so that they're
                 // in the middle of the triangle cluster image

@@ -2,7 +2,6 @@
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 
-[assembly: Xamarin.Forms.Xaml.XamlCompilation(Xamarin.Forms.Xaml.XamlCompilationOptions.Compile)]
 namespace MapBoxQs
 {
     public partial class App : Application
@@ -11,7 +10,7 @@ namespace MapBoxQs
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new HomePage());
+            MainPage = new NavigationPage(new StylesDefaultPage());
         }
 
         protected override void OnStart()

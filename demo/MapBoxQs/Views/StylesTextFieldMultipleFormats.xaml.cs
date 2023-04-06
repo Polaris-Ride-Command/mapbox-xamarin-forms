@@ -6,11 +6,11 @@ using Naxam.Mapbox.Layers;
 using Naxam.Mapbox.Sources;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
-using Xamarin.Forms.Xaml;
+
 
 namespace MapBoxQs.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+      
     public partial class StylesTextFieldMultipleFormats : ContentPage
     {
         public StylesTextFieldMultipleFormats()
@@ -29,7 +29,7 @@ namespace MapBoxQs.Views
             var bigLabel = Expression.CreateFormatEntry(
                 Expression.Get("name_en"),
                 FormatOption.FormatFontScale(1.5),
-                FormatOption.FormatTextColor(Color.Blue),
+                FormatOption.FormatTextColor(Colors.Blue),
                 FormatOption.FormatTextFont(new [] {"Ubuntu Medium", "Arial Unicode MS Regular"})
             );
 
