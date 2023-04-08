@@ -8,6 +8,7 @@ using FFImageLoading.Maui;
 using Naxam.Mapbox.Platform.iOS;
 using Naxam.Controls.Mapbox.Platform.iOS;
 using Naxam.Controls.Forms;
+using MapBoxQs.Services;
 
 namespace MapBoxQs.iOS
 {
@@ -40,13 +41,10 @@ namespace MapBoxQs.iOS
                 .UseMauiCompatibility()
                 .UseMauiCommunityToolkit()
                 .UseFFImageLoading()
-                .UseNaxamFormsiOS()
-                .ConfigureMauiHandlers((handlers) =>
-                {
-                    handlers.AddHandler(typeof(MapView), typeof(MapViewRenderer));
+                .UseNaxamFormsiOS();
 
-                }); ;
-           
+            Mapbox.MGLAccountManager.AccessToken = MapBoxService.AccessToken;
+
             return builder.Build();
         }
     }

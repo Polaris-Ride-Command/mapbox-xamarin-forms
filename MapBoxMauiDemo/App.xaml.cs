@@ -1,4 +1,4 @@
-﻿namespace MapBoxMauiDemo;
+﻿namespace MapboxMauiDemo;
 
 public partial class App : Application
 {
@@ -6,7 +6,7 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new NavigationPage(new StylesDefaultPage());
-    }
+		MainPage = new AppShell();
+	}
 }
 

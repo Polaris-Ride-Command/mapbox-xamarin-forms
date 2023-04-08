@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace MapBoxMauiDemo;
+namespace MapboxMauiDemo;
 
 public class Program
 {

@@ -1,10 +1,8 @@
-﻿using Microsoft.Extensions.Logging;
-
-#if IOS
+﻿using MapboxMauiDemo.Services;
+using Microsoft.Extensions.Logging;
 using Naxam.Mapbox.Platform.iOS;
-#endif
 
-namespace MapBoxMauiDemo;
+namespace MapboxMauiDemo;
 
 public static class MauiProgram
 {
@@ -19,13 +17,14 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-#if IOS
-			builder.UseNaxamFormsiOS();
-			new Naxam.Controls.Mapbox.Platform.iOS.MapViewRenderer();
+#if DEBUG
+		builder.Logging.AddDebug();
 #endif
 
-#if DEBUG
-        builder.Logging.AddDebug();
+#if IOS
+        Mapbox.MGLAccountManager.AccessToken = MapBoxService.AccessToken;
+        builder.UseNaxamFormsiOS();
+
 #endif
 
         return builder.Build();

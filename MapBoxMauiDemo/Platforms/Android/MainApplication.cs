@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace MapBoxMauiDemo;
+namespace MapboxMauiDemo;
 
 [Application]
 public class MainApplication : MauiApplication

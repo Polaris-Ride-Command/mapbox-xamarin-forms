@@ -1,4 +1,4 @@
-﻿namespace MapBoxMauiDemo;
+﻿namespace MapboxMauiDemo;
 
 public partial class AppShell : Shell
 {

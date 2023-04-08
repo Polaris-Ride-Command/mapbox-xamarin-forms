@@ -14,7 +14,7 @@ namespace Naxam.Mapbox.Platform.iOS
                 .UseMauiCompatibility()
                 .ConfigureMauiHandlers((handlers) =>
                 {
-                    handlers.AddHandler(typeof(MapView), typeof(MapViewRenderer));
+                    handlers.AddCompatibilityRenderer(typeof(MapView), typeof(MapViewRenderer));
 
                 });
 

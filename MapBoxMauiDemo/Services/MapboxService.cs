@@ -1,9 +1,10 @@
 ﻿using System;
-using MapBoxMauiDemo.Dto;
+using System.Threading.Tasks;
+using MapboxMauiDemo.Dtos;
 using Naxam.Controls.Forms;
 using Newtonsoft.Json;
 
-namespace MapBoxMauiDemo.Services
+namespace MapboxMauiDemo.Services
 {
     public interface IMapBoxService
     {
@@ -11,14 +12,13 @@ namespace MapBoxMauiDemo.Services
         Task<MapStyle> GetStyleDetails(string id, string owner = null);
     }
 
-    public class MapboxService : IMapBoxService
+    public class MapBoxService : IMapBoxService
     {
         HttpClient client;
         static string BaseURL = "https://api.mapbox.com/";
         public static string AccessToken = "pk.eyJ1IjoiaGVtYW1hcHMiLCJhIjoiY2p3NXRwdzFyMGQ3YzRhbHd2YXhrNndrOCJ9.4hUaK_smFoaHNeU1xbGCQQ";
         public static string Username = "tuyenv";
-
-        public MapboxService()
+        public MapBoxService()
         {
             client = new HttpClient()
             {

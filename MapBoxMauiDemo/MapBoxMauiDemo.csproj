@@ -1,38 +1,32 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net7.0-ios;net7.0-android</TargetFrameworks>
+		<TargetFrameworks>net7.0-android;net7.0-ios</TargetFrameworks>
 		<OutputType>Exe</OutputType>
-		<RootNamespace>MapBoxMauiDemo</RootNamespace>
+		<RootNamespace>MapboxMauiDemo</RootNamespace>
 		<UseMaui>true</UseMaui>
 		<SingleProject>true</SingleProject>
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<!-- Display name -->
-		<ApplicationTitle>MapBoxMauiDemo</ApplicationTitle>
+		<ApplicationTitle>MapboxMauiDemo</ApplicationTitle>
 
 		<!-- App Identifier -->
 		<ApplicationId>com.companyname.mapboxmauidemo</ApplicationId>
-		<ApplicationIdGuid>2ed1ce24-127e-4148-9457-bb11de45aed4</ApplicationIdGuid>
+		<ApplicationIdGuid>f83061ce-957e-4aeb-97d2-268abb96eba6</ApplicationIdGuid>
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
 		<ApplicationVersion>1</ApplicationVersion>
 
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+	
 	</PropertyGroup>
 
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)'=='Debug|net7.0-ios'">
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
 	  <CreatePackage>false</CreatePackage>
-	  <CodesignProvision>Automatic</CodesignProvision>
-	  <CodesignKey>iPhone Developer</CodesignKey>
-	  <MtouchInterpreter>-all</MtouchInterpreter>
-	  <MtouchArch>ARMv7</MtouchArch>
 	</PropertyGroup>
-
-	<ItemGroup Condition="'$(Configuration)|$(TargetFramework)'=='Debug|net7.0-ios'">
-	  <ProjectReference Include="..\Naxam.Mapbox.Platform.iOS\Naxam.Mapbox.Platform.iOS.csproj" />
-	</ItemGroup>
-
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
@@ -53,22 +47,27 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="GeoJSON.Net" Version="1.3.6-rc" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Reference Include="Naxam.Mapbox.Forms">
+	    <HintPath>..\Naxam.Mapbox.Forms\bin\Debug\net7.0-ios\Naxam.Mapbox.Forms.dll</HintPath>
+	  </Reference>
 	  <Reference Include="Naxam.Mapbox.iOS">
 	    <HintPath>..\..\mapbox-ios-binding\Naxam.Mapbox.iOS\bin\Debug\net7.0-ios\Naxam.Mapbox.iOS.dll</HintPath>
 	  </Reference>
-	</ItemGroup>
-	<ItemGroup>
-	  <ProjectReference Include="..\Naxam.Mapbox.Forms\Naxam.Mapbox.Forms.csproj" />
+	  <Reference Include="Naxam.Mapbox.Platform.iOS">
+	    <HintPath>..\Naxam.Mapbox.Platform.iOS\bin\Debug\net7.0-ios\Naxam.Mapbox.Platform.iOS.dll</HintPath>
+	  </Reference>
 	</ItemGroup>
 	<ItemGroup>
 	  <None Remove="Services\" />
-	  <None Remove="Dto\" />
+	  <None Remove="Dtos\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Services\" />
-	  <Folder Include="Dto\" />
+	  <Folder Include="Dtos\" />
 	</ItemGroup>
 </Project>

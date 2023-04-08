@@ -2,7 +2,7 @@
 using Naxam.Controls.Forms;
 using Naxam.Mapbox.Layers;
 
-namespace MapBoxMauiDemo.Dto
+namespace MapboxMauiDemo.Dtos
 {
     public class MapStyleDto
     {
