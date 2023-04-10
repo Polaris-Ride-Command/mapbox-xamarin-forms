@@ -4,7 +4,8 @@ using Mapbox;
 using Naxam.Mapbox.Sources;
 using Newtonsoft.Json;
 using UIKit;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 
 namespace Naxam.Mapbox.Platform.iOS.Extensions
 {

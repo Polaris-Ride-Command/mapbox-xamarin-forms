@@ -7,13 +7,14 @@ using Naxam.Mapbox;
 using Naxam.Mapbox.Expressions;
 using Naxam.Mapbox.Layers;
 using Naxam.Mapbox.Sources;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using Point = Xamarin.Forms.Point;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
+
+using Point = Microsoft.Maui.Graphics.Point;
 
 namespace MapBoxQs.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+      
     public partial class StylesVariableLabelPlacement : ContentPage
     {
         const string GEOJSON_SRC_ID = "poi_source_id";
@@ -42,7 +43,7 @@ namespace MapBoxQs.Views
                 {
                     TextField = Expression.Get("description"),
                     TextSize = 17f,
-                    TextColor = Color.Red,
+                    TextColor = Colors.Red,
                     TextVariableAnchor = new []
                     {
                         LayerProperty.TEXT_ANCHOR_TOP, 

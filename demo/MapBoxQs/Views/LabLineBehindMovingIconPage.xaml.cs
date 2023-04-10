@@ -10,7 +10,8 @@ using Naxam.Mapbox.Expressions;
 using Naxam.Mapbox.Layers;
 using Naxam.Mapbox.Sources;
 using Newtonsoft.Json;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 
 namespace MapBoxQs.Views
 {

@@ -1,6 +1,7 @@
 using System;
 using System.Threading.Tasks;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 using Naxam.Mapbox;
 using GeoJSON.Net.Feature;
 using System.Linq;
@@ -10,11 +11,13 @@ using CoreAnimation;
 using CoreGraphics;
 using UIKit;
 using Foundation;
-using Xamarin.Forms.Platform.iOS;
+using Microsoft.Maui.Controls.Compatibility.Platform.iOS;
+using Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;
 using Naxam.Mapbox.Expressions;
 using System.Collections.Generic;
 using Naxam.Controls.Forms;
 using Naxam.Mapbox.Traffic;
+using Microsoft.Maui.Graphics;
 
 namespace Naxam.Controls.Mapbox.Platform.iOS
 {
@@ -357,7 +360,7 @@ namespace Naxam.Mapbox.Traffic
             {
                 return Expression.Match(
                     Expression.Get("congestion"),
-                    Expression.Color(Color.Transparent),
+                    Expression.Color(Colors.Transparent),
                     Expression.CreateStop("low", Expression.Color(low)),
                     Expression.CreateStop("moderate", Expression.Color(moderate)),
                     Expression.CreateStop("heavy", Expression.Color(heavy)),

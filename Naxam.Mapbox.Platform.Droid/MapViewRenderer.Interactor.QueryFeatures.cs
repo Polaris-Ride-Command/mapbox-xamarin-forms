@@ -5,7 +5,8 @@ using Naxam.Mapbox;
 
 using NFeature = GeoJSON.Net.Feature.Feature;
 using Naxam.Mapbox.Platform.Droid.Extensions;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 using Xamarin.Forms.Platform.Android;
 
 namespace Naxam.Controls.Mapbox.Platform.Droid

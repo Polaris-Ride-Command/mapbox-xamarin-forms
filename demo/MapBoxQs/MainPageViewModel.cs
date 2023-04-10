@@ -13,7 +13,8 @@ using Naxam.Mapbox.Annotations;
 using Naxam.Mapbox.Expressions;
 using Naxam.Mapbox.Layers;
 using Naxam.Mapbox.Sources;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 
 namespace MapBoxQs
 {
@@ -251,17 +252,17 @@ namespace MapBoxQs
                     Expression.Interpolate(
                         Expression.Exponential(1.0),
                         Expression.Get("mag"),
-                        Expression.CreateStop(2.0f, Expression.Color(Color.Red)),
-                        Expression.CreateStop(4.5f, Expression.Color(Color.Green)),
-                        Expression.CreateStop(7.0f, Expression.Color(Color.Blue))
+                        Expression.CreateStop(2.0f, Expression.Color(Colors.Red)),
+                        Expression.CreateStop(4.5f, Expression.Color(Colors.Green)),
+                        Expression.CreateStop(7.0f, Expression.Color(Colors.Blue))
                     )
                 };
                 MapFunctions.AddLayer(unclusteredLayer);
 
                 var layers = new KeyValuePair<int, Color>[] {
-                    new KeyValuePair<int, Color>(150, Color.CadetBlue),
-                    new KeyValuePair<int, Color>(20, Color.DarkOrange),
-                    new KeyValuePair<int, Color>(0, Color.Purple)
+                    new KeyValuePair<int, Color>(150, Colors.CadetBlue),
+                    new KeyValuePair<int, Color>(20, Colors.DarkOrange),
+                    new KeyValuePair<int, Color>(0, Colors.Purple)
                 };
                 for (int j = 0; j < layers.Length; j++)
                 {
@@ -290,7 +291,7 @@ namespace MapBoxQs
                 {
                     TextField = Expression.ToString(Expression.Get("point_count")),
                     TextSize = Expression.Literal(12.0f),
-                    TextColor = Expression.Color(Color.White),
+                    TextColor = Expression.Color(Colors.White),
                     TextIgnorePlacement = Expression.Literal(true),
                     TextAllowOverlap = Expression.Literal(true),
                 };
@@ -862,7 +863,7 @@ namespace MapBoxQs
                     Coordinates = currentPosition,
                     IconImage = pinIcon,
                     IconSize = 1,
-                    IconColor = Color.Green,
+                    IconColor = Colors.Green,
                 };
                 annotation.Title = "PointAnnot." + i;
                 Annotations.Add(annotation);

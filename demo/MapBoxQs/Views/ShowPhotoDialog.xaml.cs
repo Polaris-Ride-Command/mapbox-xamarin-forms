@@ -1,12 +1,13 @@
 ﻿using System;
 using System.IO;
 
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
+
 
 namespace MapBoxQs.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+      
     public partial class ShowPhotoDialog : ContentPage
     {
         public ShowPhotoDialog(byte[] data)

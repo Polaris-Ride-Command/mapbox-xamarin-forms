@@ -1,6 +1,7 @@
 ﻿using System;
 using Naxam.Controls;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 
 namespace Naxam.Mapbox.Annotations
 {
@@ -26,12 +27,12 @@ namespace Naxam.Mapbox.Annotations
 
         public Color? CircleColor
         {
-            get => Properties.TryGetValue(PROPERTY_CIRCLE_COLOR, out var val) && val is string sVal ? ((Color?)Color.FromHex(sVal)) : null;
+            get => Properties.TryGetValue(PROPERTY_CIRCLE_COLOR, out var val) && val is string sVal ? ((Color?)Color.FromArgb(sVal)) : null;
             set
             {
-                if (value.HasValue)
+                if (value is not null)
                 {
-                    Properties[PROPERTY_CIRCLE_COLOR] = value.Value.ToHex();
+                    Properties[PROPERTY_CIRCLE_COLOR] = value.ToHex();
                 }
                 else
                 {
@@ -93,7 +94,7 @@ namespace Naxam.Mapbox.Annotations
             get => Properties.TryGetValue(PROPERTY_CIRCLE_STROKE_COLOR, out var val) && val is Color ? ((Color?)val) : null;
             set
             {
-                if (value.HasValue)
+                if (value is not null)
                 {
                     Properties[PROPERTY_CIRCLE_STROKE_COLOR] = value;
                 }

@@ -6,12 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
+
 
 namespace MapBoxQs.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+      
     public partial class OfflineSimpleOfflineMapPage : ContentPage
     {
         private IOfflineStorageService offlineService;

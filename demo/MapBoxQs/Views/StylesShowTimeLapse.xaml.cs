@@ -3,12 +3,13 @@ using Naxam.Controls.Forms;
 using Naxam.Mapbox;
 using Naxam.Mapbox.Layers;
 using Naxam.Mapbox.Sources;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
+
 
 namespace MapBoxQs.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+      
     public partial class StylesShowTimeLapse : ContentPage
     {
         public StylesShowTimeLapse()

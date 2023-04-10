@@ -8,14 +8,17 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using Xamarin.Forms;
-using Xamarin.Forms.PlatformConfiguration;
-using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
-using Xamarin.Forms.Xaml;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
+//using Microsoft.Maui.Controls.Compatibility.Platform.;
+using Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;
+using Microsoft.Maui.Controls.Platform;
+using Microsoft.Maui.Controls.PlatformConfiguration;
+using Page = Microsoft.Maui.Controls.Page;
 
 namespace MapBoxQs.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+      
     public partial class HomePage : ContentPage
     {
         ExampleItemModel[] examples;
@@ -51,7 +54,7 @@ namespace MapBoxQs.Views
         ICommand _ViewMapCommand;
         void ExecuteViewMapCommand(ExampleItemModel item)
         {
-            Xamarin.Forms.Page page = null;
+            Page page = null;
             switch (item.Title) {
                 case "Default styles":
                     page = new StylesDefaultPage();

@@ -5,12 +5,13 @@ using Naxam.Mapbox;
 using Naxam.Mapbox.Expressions;
 using Naxam.Mapbox.Layers;
 using Naxam.Mapbox.Sources;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
+
 
 namespace MapBoxQs.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+      
     public partial class PluginTraffic : ContentPage
     {
         private bool visible = true;
@@ -38,7 +39,7 @@ namespace MapBoxQs.Views
             // Add FillExtrusion layer to map using GeoJSON data
             map.Functions.AddLayer(new FillExtrusionLayer("course", "coursedata")
             {
-                FillExtrusionColor = Color.Yellow,
+                FillExtrusionColor = Colors.Yellow,
                 FillExtrusionOpacity = 0.7f,
                 FillExtrusionHeight = Expression.Get("e")
             });

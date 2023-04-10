@@ -3,7 +3,8 @@ using CoreGraphics;
 using Foundation;
 using Mapbox;
 using UIKit;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 
 namespace Naxam.Mapbox.Platform.iOS
 {

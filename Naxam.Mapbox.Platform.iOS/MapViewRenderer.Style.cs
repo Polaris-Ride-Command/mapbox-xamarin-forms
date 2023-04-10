@@ -4,9 +4,9 @@ using Mapbox;
 using Naxam.Controls.Forms;
 using Naxam.Controls.Mapbox.Platform.iOS;
 using UIKit;
-using Xamarin.Forms.Platform.iOS;
-
-[assembly: Xamarin.Forms.ExportRenderer(typeof(MapView), typeof(MapViewRenderer))]
+using Microsoft.Maui.Controls.Compatibility.Platform.iOS;
+using Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;
+using Microsoft.Maui.Controls.Platform;
 
 namespace Naxam.Controls.Mapbox.Platform.iOS
 {

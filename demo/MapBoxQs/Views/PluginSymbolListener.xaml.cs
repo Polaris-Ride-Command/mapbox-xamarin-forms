@@ -3,12 +3,13 @@ using System.Linq;
 using Naxam.Controls.Forms;
 using Naxam.Mapbox;
 using Naxam.Mapbox.Annotations;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
+
 
 namespace MapBoxQs.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+      
     public partial class PluginSymbolListener : ContentPage
     {
         const string MAKI_ICON_CAFE = "cafe-15";

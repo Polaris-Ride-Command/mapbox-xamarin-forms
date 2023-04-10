@@ -10,12 +10,11 @@ using Naxam.Mapbox.Expressions;
 using Naxam.Mapbox.Layers;
 using Naxam.Mapbox.Sources;
 using Newtonsoft.Json;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 
 namespace MapBoxQs.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DdsAddRainFallStyle : ContentPage
     {
         public const string ID_SOURCE = "source-id";

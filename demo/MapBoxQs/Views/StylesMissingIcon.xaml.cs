@@ -7,13 +7,14 @@ using Naxam.Mapbox;
 using Naxam.Mapbox.Expressions;
 using Naxam.Mapbox.Layers;
 using Naxam.Mapbox.Sources;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using Point = Xamarin.Forms.Point;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
+
+using Point = Microsoft.Maui.Graphics.Point;
 
 namespace MapBoxQs.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+      
     public partial class StylesMissingIcon : ContentPage
     {
         const string ICON_SOURCE_ID = "ICON_SOURCE_ID";

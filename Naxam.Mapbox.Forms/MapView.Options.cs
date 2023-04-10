@@ -1,6 +1,7 @@
 using System;
 using Naxam.Mapbox;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 
 namespace Naxam.Controls.Forms
 {
@@ -282,7 +283,7 @@ namespace Naxam.Controls.Forms
             nameof(AttributionTintColor),
             typeof(Color),
             typeof(MapView),
-            Color.Default,
+            Colors.Transparent,
             BindingMode.OneWay
         );
 
@@ -436,7 +437,7 @@ namespace Naxam.Controls.Forms
             nameof(ForegroundLoadColor),
             typeof(Color),
             typeof(MapView),
-            Color.Default,
+            Colors.Transparent,
             BindingMode.OneWay
         );
 

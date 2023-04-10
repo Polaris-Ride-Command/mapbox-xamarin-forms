@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 
 namespace Naxam.Mapbox.Expressions
 {
@@ -151,7 +152,7 @@ namespace Naxam.Mapbox.Expressions
          */
         public static Expression Color(Color color)
         {
-            return Rgba(color.R * 255, color.G * 255, color.B * 255, color.A);
+            return Rgba(color.Red * 255, color.Green * 255, color.Blue * 255, color.Alpha);
         }
 
         /**

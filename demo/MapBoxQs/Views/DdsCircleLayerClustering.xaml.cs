@@ -9,12 +9,13 @@ using Naxam.Mapbox.Expressions;
 using Naxam.Mapbox.Layers;
 using Naxam.Mapbox.Sources;
 using Newtonsoft.Json;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
+
 
 namespace MapBoxQs.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+      
     public partial class DdsCircleLayerClustering : ContentPage
     {
         public DdsCircleLayerClustering()
@@ -103,7 +104,7 @@ namespace MapBoxQs.Views
             {
                 TextField = Expression.ToString(Expression.Get("point_count")),
                 TextSize = 12f,
-                TextColor = Color.White,
+                TextColor = Colors.White,
                 TextIgnorePlacement = (true),
                 TextAllowOverlap = (true)
             };

@@ -2,7 +2,8 @@ using System;
 using Android.Content;
 using Android.Graphics;
 using Com.Mapbox.Mapboxsdk.Utils;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 using Xamarin.Forms.Platform.Android;
 
 namespace Naxam.Mapbox.Platform.Droid.Extensions

@@ -10,12 +10,13 @@ using Naxam.Mapbox.Expressions;
 using Naxam.Mapbox.Layers;
 using Naxam.Mapbox.Sources;
 using Newtonsoft.Json;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
+
 
 namespace MapBoxQs.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+      
     public partial class DdsMultipleGeometries : ContentPage
     {
         private const string GEOJSON_SOURCE_ID = "GEOJSONFILE";
@@ -51,7 +52,7 @@ namespace MapBoxQs.Views
             // Create and style a FillLayer that uses the Polygon Feature's coordinates in the GeoJSON data
             FillLayer countryPolygonFillLayer = new FillLayer("polygon", GEOJSON_SOURCE_ID)
             {
-                FillColor = Color.Red,
+                FillColor = Colors.Red,
                 FillOpacity = .4f,
                 Filter = Expression.Eq(Expression.Literal("$type"), Expression.Literal("Polygon")),
             };
@@ -63,7 +64,7 @@ namespace MapBoxQs.Views
             // Create and style a CircleLayer that uses the Point Features' coordinates in the GeoJSON data
             CircleLayer individualCirclesLayer = new CircleLayer("points", GEOJSON_SOURCE_ID)
             {
-                CircleColor = Color.Yellow,
+                CircleColor = Colors.Yellow,
                 CircleRadius = 3f,
                 Filter = Expression.Eq(Expression.Literal("$type"), Expression.Literal("Point"))
             };

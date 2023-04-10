@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Naxam.Controls;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
 
 namespace Naxam.Mapbox.Annotations
 {
@@ -27,12 +29,12 @@ namespace Naxam.Mapbox.Annotations
 
         public Color? FillColor
         {
-            get => Properties.TryGetValue(PROPERTY_FILL_COLOR, out var val) && val is string sVal ? ((Color?)Color.FromHex(sVal)) : null;
+            get => Properties.TryGetValue(PROPERTY_FILL_COLOR, out var val) && val is string sVal ? ((Color?)Color.FromArgb(sVal)) : null;
             set
             {
-                if (value.HasValue)
+                if (value is not null)
                 {
-                    Properties[PROPERTY_FILL_COLOR] = value.Value.ToHex();
+                    Properties[PROPERTY_FILL_COLOR] = value.ToHex();
                 }
                 else
                 {
@@ -43,12 +45,12 @@ namespace Naxam.Mapbox.Annotations
 
         public Color? OutlineColor
         {
-            get => Properties.TryGetValue(PROPERTY_FILL_OUTLINE_COLOR, out var val) && val is string sVal ? ((Color?)Color.FromHex(sVal)) : null;
+            get => Properties.TryGetValue(PROPERTY_FILL_OUTLINE_COLOR, out var val) && val is string sVal ? ((Color?)Color.FromArgb(sVal)) : null;
             set
             {
-                if (value.HasValue)
+                if (value is not null)
                 {
-                    Properties[PROPERTY_FILL_OUTLINE_COLOR] = value.Value.ToHex();
+                    Properties[PROPERTY_FILL_OUTLINE_COLOR] = value.ToHex();
                 }
                 else
                 {

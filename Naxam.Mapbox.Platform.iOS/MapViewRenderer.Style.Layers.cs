@@ -4,7 +4,8 @@ using Mapbox;
 using Naxam.Mapbox;
 using Naxam.Mapbox.Layers;
 using Naxam.Mapbox.Platform.iOS.Extensions;
-using Xamarin.Forms.Platform.iOS;
+using Microsoft.Maui.Controls.Compatibility.Platform.iOS;
+using Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;
 
 namespace Naxam.Controls.Mapbox.Platform.iOS
 {
@@ -63,7 +64,7 @@ namespace Naxam.Controls.Mapbox.Platform.iOS
 
             if (newLayer == null) return false;
 
-            mapStyle.InsertLayer(newLayer, (System.nuint)index);
+            mapStyle.InsertLayer(newLayer, (uint)index);
 
             return true;
         }
@@ -123,7 +124,7 @@ namespace Naxam.Controls.Mapbox.Platform.iOS
 
             if (light.Color != null)
             {
-                native.Color = NSExpression.FromConstant(light.Color.Value.ToUIColor());
+                native.Color = NSExpression.FromConstant(light.Color.ToUIColor());
             }
 
             if (light.ColorTransition != null)

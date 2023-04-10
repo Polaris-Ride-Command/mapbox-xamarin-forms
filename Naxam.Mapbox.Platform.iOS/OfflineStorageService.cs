@@ -8,8 +8,10 @@ using Naxam.Controls.Mapbox.Platform.iOS.Extensions;
 using System.Linq;
 using ObjCRuntime;
 using System.IO;
+using Microsoft.Maui.Controls.Compatibility.Platform.iOS;
+using Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;
+using Microsoft.Maui.Controls.Platform;
 
-[assembly: Xamarin.Forms.Dependency(typeof(Naxam.Controls.Mapbox.Platform.iOS.OfflineStorageService))]
 namespace Naxam.Controls.Mapbox.Platform.iOS
 {
     public class OfflineStorageService : NSObject, IOfflineStorageService
@@ -138,7 +140,8 @@ namespace Naxam.Controls.Mapbox.Platform.iOS
                     values.Add((NSString)packInfo[key]);
                 }
                 var userInfo = NSDictionary.FromObjectsAndKeys(values.ToArray(), keys.ToArray());
-                context = NSKeyedArchiver.ArchivedDataWithRootObject(userInfo);
+                //context = NSKeyedArchiver.ArchivedDataWithRootObject(userInfo); DEPRECATED https://developer.apple.com/documentation/foundation/nskeyedarchiver/1413189-archiveddatawithrootobject
+                context = NSKeyedArchiver.GetArchivedData(userInfo);
             }
 
             MGLOfflineStorage.SharedOfflineStorage.AddPackForRegion(region, context, (pack, error) =>

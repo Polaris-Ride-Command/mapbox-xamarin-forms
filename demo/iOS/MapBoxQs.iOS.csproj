@@ -1,335 +1,174 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-    <ProjectGuid>{9899334D-62C2-45EA-A799-8CF1D8B6AC5E}</ProjectGuid>
-    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <UseMaui>true</UseMaui>
+    <TargetFramework>net7.0-ios</TargetFramework>
     <OutputType>Exe</OutputType>
-    <RootNamespace>MapBoxQs.iOS</RootNamespace>
-    <AssemblyName>MapBoxQs.iOS</AssemblyName>
-    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    	<ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
-    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <DeviceSpecificBuild>true</DeviceSpecificBuild>
-    <MtouchDebug>true</MtouchDebug>
-    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
-    <MtouchFastDev>true</MtouchFastDev>
-    <MtouchProfiling>true</MtouchProfiling>
-    <IOSDebuggerPort>58395</IOSDebuggerPort>
-    <MtouchLink>None</MtouchLink>
-    <MtouchArch>i386, x86_64</MtouchArch>
-    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-    <PlatformTarget>x86</PlatformTarget>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
+    <CreatePackage>false</CreatePackage>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\iPhone\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchFloat32>true</MtouchFloat32>
-    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <MtouchLink>SdkOnly</MtouchLink>
-    <MtouchArch>ARMv7, ARM64</MtouchArch>
-    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-    <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer: Tuyen Vu (D494K5A23X)</CodesignKey>
-    <DeviceSpecificBuild>true</DeviceSpecificBuild>
-    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
-    <MtouchLink>None</MtouchLink>
-    <MtouchArch>i386, x86_64</MtouchArch>
-    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-    <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\iPhone\Debug</OutputPath>
-    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <DeviceSpecificBuild>true</DeviceSpecificBuild>
-    <MtouchDebug>true</MtouchDebug>
-    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
-    <MtouchFastDev>true</MtouchFastDev>
-    <MtouchProfiling>false</MtouchProfiling>
-    <MtouchFloat32>true</MtouchFloat32>
-    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <MtouchLink>SdkOnly</MtouchLink>
-    <MtouchArch>ARMv7, ARM64</MtouchArch>
-    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-    <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Core" />
-    <Reference Include="Xamarin.iOS" />
-    <Reference Include="OpenTK-1.0" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Runtime.Serialization" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Naxam.Mapbox.Forms\Naxam.Mapbox.Forms.csproj">
-      <Project>{EBB04763-2E36-4D2C-94C9-351FBACE3C83}</Project>
-      <Name>Naxam.Mapbox.Forms</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Naxam.Mapbox.Platform.iOS\Naxam.Mapbox.Platform.iOS.csproj">
-      <Project>{DDB8E5F0-975B-4CFB-8A72-AE662C0D2E1B}</Project>
-      <Name>Naxam.Mapbox.Platform.iOS</Name>
-      <IsAppExtension>false</IsAppExtension>
-      <IsWatchApp>false</IsWatchApp>
-    </ProjectReference>
-    <ProjectReference Include="..\MapBoxQs\MapBoxQs.csproj">
-      <Project>{85e7ee45-a434-481b-8777-b6ac6f986f24}</Project>
-      <Name>MapBoxQs</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%401x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%402x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%403x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%401x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%402x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%403x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%401x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%402x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%403x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-57x57%401x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-57x57%402x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60%401x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60%402x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60%403x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-72x72%401x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-72x72%402x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%401x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%402x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%403x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-83.5x83.5%402x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-50x50%401x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-50x50%402x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\icon.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\icon.imageset\icon.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\pin.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\pin.imageset\pin.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Renderers\" />
-  </ItemGroup>
-  <ItemGroup>
-    <InterfaceDefinition Include="LaunchScreen.storyboard" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Info.plist" />
-    <None Include="Entitlements.plist" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Main.cs" />
-    <Compile Include="AppDelegate.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\miami_beach@2x.png" />
-    <BundleResource Include="Resources\naxam_copyright.png" />
-    <BundleResource Include="Resources\naxam_copyright%402x.png" />
-    <BundleResource Include="Resources\naxam_copyright%403x.png" />
-    <BundleResource Include="Resources\materialdesignicons-webfont.ttf" />
-    <BundleResource Include="Resources\poi_places.geojson" />
-    <BundleResource Include="Resources\ports.geojson" />
-    <BundleResource Include="Resources\us_west_coast.geojson" />
-    <BundleResource Include="Resources\ic_cross%403x.png" />
-    <BundleResource Include="Resources\catsvc_gasbottles%403x.png">
-      <SubType>
-      </SubType>
-      <Generator>
-      </Generator>
-    </BundleResource>
-    <BundleResource Include="Resources\red_marker%402x.png" />
-    <BundleResource Include="Resources\pink_dot%403x.png" />
-    <BundleResource Include="Resources\la_heatmap_styling_points.geojson" />
-    <BundleResource Include="Resources\bathymetry-data.geojson" />
-    <BundleResource Include="Resources\single_quake_icon%403x.png" />
-    <BundleResource Include="Resources\earthquake_triangle%403x.png" />
-    <BundleResource Include="Resources\golden_gate_lines.geojson" />
-    <BundleResource Include="Resources\fake_norway_campsites.geojson" />
-    <BundleResource Include="Resources\blue_marker%403x.png" />
-    <BundleResource Include="Resources\red_marker%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Acr.Support">
-      <Version>2.1.0</Version>
-    </PackageReference>
-    <PackageReference Include="Acr.UserDialogs">
-      <Version>7.0.30</Version>
-    </PackageReference>
-    <PackageReference Include="Naxam.Mapbox.iOS">
-      <Version>5.4.0</Version>
-    </PackageReference>
-    <PackageReference Include="Newtonsoft.Json">
-      <Version>12.0.2</Version>
-    </PackageReference>
-    <PackageReference Include="Rg.Plugins.Popup">
-      <Version>1.1.5.188</Version>
-    </PackageReference>
-    <PackageReference Include="Splat">
-      <Version>8.3.1</Version>
-    </PackageReference>
-    <PackageReference Include="Xam.Plugin.Media">
-      <Version>4.0.1.5</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.FFImageLoading.Forms">
-      <Version>2.4.11.982</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Forms">
-      <Version>4.2.0.778463</Version>
-    </PackageReference>
-    <PackageReference Include="GeoJSON.Net">
-      <Version>1.1.73</Version>
-    </PackageReference>
-    <PackageReference Include="Shiny.Net.Http">
-      <Version>1.0.0.400-beta</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Essentials">
-      <Version>1.3.1</Version>
-    </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\blue_marker_view%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\local_style_file.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\southeast_radar_0@3x.png">
-      <SubType>Designer</SubType>
-      <Generator>
-      </Generator>
-    </BundleResource>
-    <BundleResource Include="Resources\southeast_radar_1@3x.png">
-      <SubType>Designer</SubType>
-      <Generator>
-      </Generator>
-    </BundleResource>
-    <BundleResource Include="Resources\southeast_radar_2@3x.png">
-      <SubType>Designer</SubType>
-      <Generator>
-      </Generator>
-    </BundleResource>
-    <BundleResource Include="Resources\southeast_radar_3@3x.png">
-      <SubType>Designer</SubType>
-      <Generator>
-      </Generator>
-    </BundleResource>
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\no_bg_style.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\antony@3x.png">
-      <SubType>Designer</SubType>
-      <Generator>
-      </Generator>
-    </BundleResource>
-    <BundleResource Include="Resources\carlos@3x.png">
-      <SubType>Designer</SubType>
-      <Generator>
-      </Generator>
-    </BundleResource>
-    <BundleResource Include="Resources\luciana@3x.png">
-      <SubType>Designer</SubType>
-      <Generator>
-      </Generator>
-    </BundleResource>
-    <BundleResource Include="Resources\maria@3x.png">
-      <SubType>Designer</SubType>
-      <Generator>
-      </Generator>
-    </BundleResource>
-  </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\marathon_route.geojson" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\indoor-3d-map.geojson" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ImageAsset Update="Assets.xcassets\AppIcon.appiconset\Icon-App-57x57%401x.png">
+      <Link>Assets.xcassets\AppIcon.appiconset\Icon-App-57x57%401x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%402x.png">
+      <Link>Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%401x.png">
+      <Link>Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%401x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60%401x.png">
+      <Link>Assets.xcassets\AppIcon.appiconset\Icon-App-60x60%401x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Assets.xcassets\AppIcon.appiconset\Icon-Small-50x50%402x.png">
+      <Link>Assets.xcassets\AppIcon.appiconset\Icon-Small-50x50%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%401x.png">
+      <Link>Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%401x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%403x.png">
+      <Link>Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Assets.xcassets\AppIcon.appiconset\Icon-App-72x72%401x.png">
+      <Link>Assets.xcassets\AppIcon.appiconset\Icon-App-72x72%401x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%401x.png">
+      <Link>Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%401x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Assets.xcassets\AppIcon.appiconset\Icon-App-83.5x83.5%402x.png">
+      <Link>Assets.xcassets\AppIcon.appiconset\Icon-App-83.5x83.5%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%403x.png">
+      <Link>Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%402x.png">
+      <Link>Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%403x.png">
+      <Link>Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%402x.png">
+      <Link>Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Assets.xcassets\AppIcon.appiconset\Icon-App-72x72%402x.png">
+      <Link>Assets.xcassets\AppIcon.appiconset\Icon-App-72x72%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60%403x.png">
+      <Link>Assets.xcassets\AppIcon.appiconset\Icon-App-60x60%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Assets.xcassets\AppIcon.appiconset\Icon-Small-50x50%401x.png">
+      <Link>Assets.xcassets\AppIcon.appiconset\Icon-Small-50x50%401x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60%402x.png">
+      <Link>Assets.xcassets\AppIcon.appiconset\Icon-App-60x60%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Assets.xcassets\AppIcon.appiconset\Icon-App-57x57%402x.png">
+      <Link>Assets.xcassets\AppIcon.appiconset\Icon-App-57x57%402x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%401x.png">
+      <Link>Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%401x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%403x.png">
+      <Link>Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%403x.png</Link>
+    </ImageAsset>
+    <ImageAsset Update="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%402x.png">
+      <Link>Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%402x.png</Link>
+    </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\catsvc_gasbottles%403x.png">
+      <Link>Resources\catsvc_gasbottles%403x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\single_quake_icon%403x.png">
+      <Link>Resources\single_quake_icon%403x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\blue_marker_view%403x.png">
+      <Link>Resources\blue_marker_view%403x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\red_marker%402x.png">
+      <Link>Resources\red_marker%402x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\ic_cross%403x.png">
+      <Link>Resources\ic_cross%403x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\southeast_radar_2%403x.png">
+      <Link>Resources\southeast_radar_2%403x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\southeast_radar_0%403x.png">
+      <Link>Resources\southeast_radar_0%403x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\red_marker%403x.png">
+      <Link>Resources\red_marker%403x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\maria%403x.png">
+      <Link>Resources\maria%403x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\naxam_copyright%402x.png">
+      <Link>Resources\naxam_copyright%402x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\naxam_copyright%403x.png">
+      <Link>Resources\naxam_copyright%403x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\luciana%403x.png">
+      <Link>Resources\luciana%403x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\miami_beach%402x.png">
+      <Link>Resources\miami_beach%402x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\earthquake_triangle%403x.png">
+      <Link>Resources\earthquake_triangle%403x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\carlos%403x.png">
+      <Link>Resources\carlos%403x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\southeast_radar_3%403x.png">
+      <Link>Resources\southeast_radar_3%403x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\antony%403x.png">
+      <Link>Resources\antony%403x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\blue_marker%403x.png">
+      <Link>Resources\blue_marker%403x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\southeast_radar_1%403x.png">
+      <Link>Resources\southeast_radar_1%403x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\pink_dot%403x.png">
+      <Link>Resources\pink_dot%403x.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Naxam.Mapbox.Forms\Naxam.Mapbox.Forms.csproj" />
+    <ProjectReference Include="..\..\Naxam.Mapbox.Platform.iOS\Naxam.Mapbox.Platform.iOS.csproj" />
+    <ProjectReference Include="..\MapBoxQs\MapBoxQs.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs" Version="8.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Mopups" Version="1.1.1" />
+    <PackageReference Include="Splat" Version="14.6.8" />
+    <PackageReference Include="Xam.Plugin.Media" Version="6.0.1-beta" />
+    <PackageReference Include="GeoJSON.Net" Version="1.3.6-rc" />
+    <PackageReference Include="Shiny.Net.Http" Version="3.0.0-alpha-0560" />
+    <PackageReference Include="FFImageLoading.Compat" Version="3.999.0-ci4507452544" />
+    <PackageReference Include="FFImageLoading.Compat.Maui" Version="3.999.0-ci4507452544" />
+    <PackageReference Include="FFImageLoading.Compat.Svg" Version="3.999.0-ci4507452544" />
+    <PackageReference Include="FFImageLoading.Compat.Svg.Maui" Version="3.999.0-ci4507452544" />
+    <PackageReference Include="FFImageLoading.Transformations" Version="3.999.0-ci4507452544" />
+    <PackageReference Include="Shiny.Jobs" Version="3.0.0-alpha-0560" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Naxam.Mapbox.iOS">
+      <HintPath>..\..\..\mapbox-ios-binding\Naxam.Mapbox.iOS\bin\Debug\net7.0-ios\Naxam.Mapbox.iOS.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>

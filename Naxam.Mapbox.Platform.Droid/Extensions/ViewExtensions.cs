@@ -11,7 +11,8 @@ using Android.Views;
 using Android.Widget;
 using AViews = Android.Views;
 using APlatform = Xamarin.Forms.Platform.Android.Platform;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 using Application = Android.App.Application;
 
 namespace Naxam.Mapbox.Platform.Droid.Extensions

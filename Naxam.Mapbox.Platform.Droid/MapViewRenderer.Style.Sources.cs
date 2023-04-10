@@ -3,7 +3,8 @@ using Com.Mapbox.Geojson;
 using GeoJSON.Net;
 using Naxam.Mapbox.Platform.Droid.Extensions;
 using Newtonsoft.Json;
-using Xamarin.Forms;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 using NxSource = Naxam.Mapbox.Sources.Source;
 
 namespace Naxam.Controls.Mapbox.Platform.Droid
