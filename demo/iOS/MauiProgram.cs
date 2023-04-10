@@ -32,12 +32,6 @@ namespace MapBoxQs.iOS
         {
             var build = Builder;
             build.UseMauiApp<App>()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("FabExMDL2.ttf", "FabExMDL2");
-                    fonts.AddFont("office365icons.ttf", "office365icons");
-                    fonts.AddFont("segoemdlicons.ttf", "segoemdlicons");
-                })
                 .UseMauiCompatibility()
                 .UseMauiCommunityToolkit()
                 .UseFFImageLoading()

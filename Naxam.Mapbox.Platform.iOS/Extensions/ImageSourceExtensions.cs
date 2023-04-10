@@ -11,11 +11,21 @@ namespace Naxam.Mapbox.Platform.iOS.Extensions
     {
         public static UIImage GetImage(this ImageSource source)
         {
-            //var handler =  IImageSourceHandler  (source);
-            var handler = source.Handler.MauiContext;
+
+            /*** old xamarin code
+             * var handler =  Xamarin.Forms.Internals.Registrar.Registered
+                .GetHandlerForObject<IImageSourceHandler>(source);
+
+            return handler?
+                .LoadImageAsync(source).Result;
+            ***/
 
 
-            return source.GetPlatformImageAsync(handler).Result.Value;
+            var handler = Microsoft.Maui.Controls.Internals.Registrar.Registered
+                .GetHandlerForObject<IImageSourceHandler>(source);
+
+
+            return handler?.LoadImageAsync(source).Result;
         }
     }
 }

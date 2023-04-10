@@ -2,6 +2,7 @@
 using CommunityToolkit.Maui;
 using FFImageLoading.Maui;
 using MapBoxQs.Views;
+using Microsoft.Maui.Controls.Compatibility.Hosting;
 using Shiny.Net.Http;
 
 namespace MapBoxQs
@@ -13,6 +14,7 @@ namespace MapBoxQs
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseMauiCompatibility()
                 .UseFFImageLoading()
                 .UseMauiCommunityToolkit()
                 .RegisterShinyServices()
