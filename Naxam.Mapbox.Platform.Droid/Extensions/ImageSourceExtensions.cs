@@ -4,7 +4,7 @@ using Android.Graphics;
 using Com.Mapbox.Mapboxsdk.Utils;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
-using Xamarin.Forms.Platform.Android;
+using Microsoft.Maui.Controls.Compatibility.Platform.Android;
 
 namespace Naxam.Mapbox.Platform.Droid.Extensions
 {
@@ -12,11 +12,17 @@ namespace Naxam.Mapbox.Platform.Droid.Extensions
     {
         public static Bitmap GetBitmap(this ImageSource source, Context context)
         {
-            var handler =  Xamarin.Forms.Internals.Registrar.Registered
+            //var handler =  Xamarin.Forms.Internals.Registrar.Registered
+            //    .GetHandlerForObject<IImageSourceHandler>(source);
+
+            //return handler?
+            //    .LoadImageAsync(source, context).Result;
+
+            var handler = Microsoft.Maui.Controls.Internals.Registrar.Registered
                 .GetHandlerForObject<IImageSourceHandler>(source);
 
-            return handler?
-                .LoadImageAsync(source, context).Result;
+
+            return handler?.LoadImageAsync(source, context).Result;
         }
     }
 }

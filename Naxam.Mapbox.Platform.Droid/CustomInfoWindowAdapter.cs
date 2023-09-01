@@ -8,7 +8,7 @@ using Android.Widget;
 
 namespace Naxam.Mapbox.Platform.Droid
 {
-    using Platform = Xamarin.Forms.Platform.Android.Platform;
+    using Platform = Microsoft.Maui.Controls.Compatibility.Platform.Android.Platform;
 
     public class CustomInfoWindowAdapter : Java.Lang.Object, IInfoWindowAdapter
     {

@@ -61,7 +61,47 @@
 	  <Reference Include="Naxam.Mapbox.Platform.iOS">
 	    <HintPath>..\Naxam.Mapbox.Platform.iOS\bin\Debug\net7.0-ios\Naxam.Mapbox.Platform.iOS.dll</HintPath>
 	  </Reference>
+	  <Reference Include="Naxam.Mapbox.Platform.Droid">
+	    <HintPath>..\Naxam.Mapbox.Platform.Droid\bin\Debug\net7.0-android\Naxam.Mapbox.Platform.Droid.dll</HintPath>
+	  </Reference>
+	    <Reference Include="com.mapbox.mapboxsdk.mapbox_android_accounts">
+	    <HintPath>..\Naxam.Mapbox.Platform.Droid\bin\Debug\net7.0-android\com.mapbox.mapboxsdk.mapbox_android_accounts.dll</HintPath>
+	  </Reference>
+	  <Reference Include="com.mapbox.mapboxsdk.mapbox_android_core">
+	    <HintPath>..\Naxam.Mapbox.Platform.Droid\bin\Debug\net7.0-android\com.mapbox.mapboxsdk.mapbox_android_core.dll</HintPath>
+	  </Reference>
+	  <Reference Include="com.mapbox.mapboxsdk.mapbox_android_gestures">
+	    <HintPath>..\Naxam.Mapbox.Platform.Droid\bin\Debug\net7.0-android\com.mapbox.mapboxsdk.mapbox_android_gestures.dll</HintPath>
+	  </Reference>
+	  <Reference Include="com.mapbox.mapboxsdk.mapbox_android_plugin_annotation">
+	    <HintPath>..\Naxam.Mapbox.Platform.Droid\bin\Debug\net7.0-android\com.mapbox.mapboxsdk.mapbox_android_plugin_annotation.dll</HintPath>
+	  </Reference>
+	  <Reference Include="com.mapbox.mapboxsdk.mapbox_android_plugin_building">
+	    <HintPath>..\Naxam.Mapbox.Platform.Droid\bin\Debug\net7.0-android\com.mapbox.mapboxsdk.mapbox_android_plugin_building.dll</HintPath>
+	  </Reference>
+	  <Reference Include="com.mapbox.mapboxsdk.mapbox_android_plugin_traffic">
+	    <HintPath>..\Naxam.Mapbox.Platform.Droid\bin\Debug\net7.0-android\com.mapbox.mapboxsdk.mapbox_android_plugin_traffic.dll</HintPath>
+	  </Reference>
+	  <Reference Include="com.mapbox.mapboxsdk.mapbox_android_sdk_gl_core">
+	    <HintPath>..\Naxam.Mapbox.Platform.Droid\bin\Debug\net7.0-android\com.mapbox.mapboxsdk.mapbox_android_sdk_gl_core.dll</HintPath>
+	  </Reference>
+	  <Reference Include="com.mapbox.mapboxsdk.mapbox_android_sdk">
+	    <HintPath>..\Naxam.Mapbox.Platform.Droid\bin\Debug\net7.0-android\com.mapbox.mapboxsdk.mapbox_android_sdk.dll</HintPath>
+	  </Reference>
+	  <Reference Include="com.mapbox.mapboxsdk.mapbox_android_telemetry">
+	    <HintPath>..\Naxam.Mapbox.Platform.Droid\bin\Debug\net7.0-android\com.mapbox.mapboxsdk.mapbox_android_telemetry.dll</HintPath>
+	  </Reference>
+	  <Reference Include="com.mapbox.mapboxsdk.mapbox_sdk_geojson">
+	    <HintPath>..\Naxam.Mapbox.Platform.Droid\bin\Debug\net7.0-android\com.mapbox.mapboxsdk.mapbox_sdk_geojson.dll</HintPath>
+	  </Reference>
+	  <Reference Include="com.mapbox.mapboxsdk.mapbox_sdk_turf">
+	    <HintPath>..\Naxam.Mapbox.Platform.Droid\bin\Debug\net7.0-android\com.mapbox.mapboxsdk.mapbox_sdk_turf.dll</HintPath>
+	  </Reference>
+<!--	  <Reference Include="Naxam.Mapbox.Forms">
+	    <HintPath>..\Naxam.Mapbox.Platform.Droid\bin\Debug\net7.0-android\Naxam.Mapbox.Forms.dll</HintPath>
+	  </Reference>-->
 	</ItemGroup>
+
 	<ItemGroup>
 	  <None Remove="Services\" />
 	  <None Remove="Dtos\" />
@@ -70,4 +110,5 @@
 	  <Folder Include="Services\" />
 	  <Folder Include="Dtos\" />
 	</ItemGroup>
+
 </Project>

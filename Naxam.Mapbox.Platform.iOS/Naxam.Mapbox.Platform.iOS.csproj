@@ -18,9 +18,9 @@
     <ProjectReference Include="..\Naxam.Mapbox.Forms\Naxam.Mapbox.Forms.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Naxam.Mapbox.iOS">
-      <HintPath>..\..\mapbox-ios-binding\Naxam.Mapbox.iOS\bin\Debug\net7.0-ios\Naxam.Mapbox.iOS.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" />
+    <Reference Include="Naxam.Mapbox.iOS">
+      <HintPath>..\..\mapbox-ios-binding\output\Naxam.Mapbox.iOS.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

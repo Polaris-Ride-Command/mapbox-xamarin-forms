@@ -1,6 +1,13 @@
-﻿using MapboxMauiDemo.Services;
+﻿using Android.Content;
+using MapboxMauiDemo.Services;
 using Microsoft.Extensions.Logging;
+#if IOS
 using Naxam.Mapbox.Platform.iOS;
+#endif
+
+#if ANDROID
+using Naxam.Mapbox.Platform.Droid;
+#endif
 
 namespace MapboxMauiDemo;
 
@@ -27,7 +34,11 @@ public static class MauiProgram
 
 #endif
 
-        return builder.Build();
+#if ANDROID
+        builder.UseNaxamFormsDroid();
+#endif
+
+		return builder.Build();
 	}
 }
 

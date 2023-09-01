@@ -5,10 +5,12 @@ using Com.Mapbox.Mapboxsdk.Camera;
 using Com.Mapbox.Mapboxsdk.Geometry;
 using Com.Mapbox.Mapboxsdk.Maps;
 using Naxam.Controls.Forms;
-using Xamarin.Forms.Platform.Android;
+using Microsoft.Maui.Controls.Compatibility.Platform.Android;
 using MapView = Naxam.Controls.Forms.MapView;
 using View = Android.Views.View;
 using NxLatLng = Naxam.Mapbox.LatLng;
+using Microsoft.Maui.Controls.Platform;
+using Microsoft.Maui.Platform;
 
 namespace Naxam.Controls.Mapbox.Platform.Droid
 {

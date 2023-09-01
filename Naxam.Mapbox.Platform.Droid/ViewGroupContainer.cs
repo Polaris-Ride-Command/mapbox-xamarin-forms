@@ -12,12 +12,14 @@ using Android.Widget;
 using Com.Mapbox.Mapboxsdk.Annotations;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
-using Xamarin.Forms.Platform.Android;
 using Naxam.Controls.Platform.Droid.Utils;
+using Microsoft.Maui.Controls.Compatibility.Platform.Android;
+using Microsoft.Maui.Platform;
+using Microsoft.Maui.Graphics;
 
 namespace Naxam.Mapbox.Platform.Droid
 {
-    using Platform = Xamarin.Forms.Platform.Android.Platform;
+    using Platform = Microsoft.Maui.Controls.Compatibility.Platform.Android.Platform;
 
     public class ViewGroupContainer : ViewGroup
     {
@@ -69,7 +71,7 @@ namespace Naxam.Mapbox.Platform.Droid
             var width = (int)ctx.FromPixels(MeasureSpecFactory.GetSize(widthMeasureSpec));
 
             SizeRequest request = _child.Element.Measure(width, double.PositiveInfinity, MeasureFlags.IncludeMargins);
-            Xamarin.Forms.Layout.LayoutChildIntoBoundingRegion(_child.Element, new Rectangle(0, 0, request.Request.Width, request.Request.Height));
+            Microsoft.Maui.Controls.Compatibility.Layout.LayoutChildIntoBoundingRegion(_child.Element, new Rect(0, 0, request.Request.Width, request.Request.Height));
 
             int widthSpec = MeasureSpecFactory.MakeMeasureSpec((int)ctx.ToPixels(request.Request.Width), MeasureSpecMode.Exactly);
             int heightSpec = MeasureSpecFactory.MakeMeasureSpec((int)ctx.ToPixels(request.Request.Height), MeasureSpecMode.Exactly);

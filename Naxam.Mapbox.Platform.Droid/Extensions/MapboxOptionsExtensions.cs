@@ -3,7 +3,9 @@ using Com.Mapbox.Mapboxsdk.Constants;
 using Com.Mapbox.Mapboxsdk.Maps;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
-using Xamarin.Forms.Platform.Android;
+using Microsoft.Maui.Controls.Compatibility.Platform.Android;
+using Microsoft.Maui.Controls.Platform.Android;
+using Microsoft.Maui.Platform;
 
 namespace Naxam.Mapbox.Platform.Droid.Extensions
 {

@@ -2,6 +2,7 @@
 using System.Linq;
 using Com.Mapbox.Mapboxsdk.Geometry;
 using Com.Mapbox.Mapboxsdk.Maps;
+using Microsoft.Maui.Graphics;
 using Naxam.Controls.Forms;
 using Naxam.Mapbox;
 using MapView = Com.Mapbox.Mapboxsdk.Maps.MapView;
@@ -128,9 +129,9 @@ namespace Naxam.Controls.Mapbox.Platform.Droid
         public bool OnMapClick(Com.Mapbox.Mapboxsdk.Geometry.LatLng p0)
         {
             var point = map.Projection.ToScreenLocation(p0);
-            var xfPoint = new Xamarin.Forms.Point(point.X, point.Y);
+            var xfPoint = new Point(point.X, point.Y);
             var xfPosition = new NxLatLng(p0.Latitude, p0.Longitude);
-            (NxLatLng, Xamarin.Forms.Point) commandParamters = (xfPosition, xfPoint);
+            (NxLatLng, Point) commandParamters = (xfPosition, xfPoint);
 
             if (Element.DidTapOnMapCommand?.CanExecute(commandParamters) == true) {
                 Element.DidTapOnMapCommand.Execute(commandParamters);

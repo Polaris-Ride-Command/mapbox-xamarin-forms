@@ -9,7 +9,8 @@ using NxCameraPosition = Naxam.Mapbox.CameraPosition;
 using NxLatLngBounds = Naxam.Mapbox.LatLngBounds;
 using Naxam.Mapbox.Platform.Droid.Extensions;
 using Naxam.Mapbox;
-using Xamarin.Forms.Platform.Android;
+using Microsoft.Maui.Controls.Compatibility.Platform.Android;
+using Microsoft.Maui.Platform;
 
 namespace Naxam.Controls.Mapbox.Platform.Droid
 {

@@ -1,4 +1,4 @@
-﻿using Xamarin.Forms.Platform.Android;
+﻿using Microsoft.Maui.Controls.Platform.Android;
 using Com.Mapbox.Mapboxsdk.Style.Layers;
 using NxLayer = Naxam.Mapbox.Layers.Layer;
 using NxCircleLayer = Naxam.Mapbox.Layers.CircleLayer;

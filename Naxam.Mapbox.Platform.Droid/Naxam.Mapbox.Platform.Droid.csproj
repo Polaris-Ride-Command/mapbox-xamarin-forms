@@ -31,12 +31,43 @@
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
   </ItemGroup>
-<!-- 
-  <ItemGroup>
-    <ProjectReference Include="..\Naxam.Mapbox.Forms\Naxam.Mapbox.Forms.csproj">
-      <Project>{EBB04763-2E36-4D2C-94C9-351FBACE3C83}</Project>
-      <Name>Naxam.Mapbox.Forms</Name>
-    </ProjectReference>
-  </ItemGroup> -->
 
+  <ItemGroup>
+    <ProjectReference Include="..\Naxam.Mapbox.Forms\Naxam.Mapbox.Forms.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="com.mapbox.mapboxsdk.mapbox_android_accounts">
+      <HintPath>..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_android_accounts.dll</HintPath>
+    </Reference>
+    <Reference Include="com.mapbox.mapboxsdk.mapbox_android_core">
+      <HintPath>..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_android_core.dll</HintPath>
+    </Reference>
+    <Reference Include="com.mapbox.mapboxsdk.mapbox_android_gestures">
+      <HintPath>..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_android_gestures.dll</HintPath>
+    </Reference>
+    <Reference Include="com.mapbox.mapboxsdk.mapbox_android_plugin_annotation">
+      <HintPath>..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_android_plugin_annotation.dll</HintPath>
+    </Reference>
+    <Reference Include="com.mapbox.mapboxsdk.mapbox_android_plugin_building">
+      <HintPath>..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_android_plugin_building.dll</HintPath>
+    </Reference>
+    <Reference Include="com.mapbox.mapboxsdk.mapbox_android_plugin_traffic">
+      <HintPath>..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_android_plugin_traffic.dll</HintPath>
+    </Reference>
+    <Reference Include="com.mapbox.mapboxsdk.mapbox_android_sdk_gl_core">
+      <HintPath>..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_android_sdk_gl_core.dll</HintPath>
+    </Reference>
+    <Reference Include="com.mapbox.mapboxsdk.mapbox_android_sdk">
+      <HintPath>..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_android_sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="com.mapbox.mapboxsdk.mapbox_android_telemetry">
+      <HintPath>..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_android_telemetry.dll</HintPath>
+    </Reference>
+    <Reference Include="com.mapbox.mapboxsdk.mapbox_sdk_geojson">
+      <HintPath>..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_sdk_geojson.dll</HintPath>
+    </Reference>
+    <Reference Include="com.mapbox.mapboxsdk.mapbox_sdk_turf">
+      <HintPath>..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_sdk_turf.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>

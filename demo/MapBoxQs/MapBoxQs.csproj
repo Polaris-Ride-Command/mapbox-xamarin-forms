@@ -35,15 +35,15 @@
     <PackageReference Include="GeoJSON.Net" Version="1.2.19" />
     <PackageReference Include="DryIoc" Version="5.3.4" />
     <PackageReference Include="Shiny.Net.Http" Version="3.0.0-alpha-0560" />
-    <PackageReference Include="FFImageLoading.Compat.Svg" Version="3.999.0-ci4507452544" />
-    <PackageReference Include="FFImageLoading.Compat.Maui" Version="3.999.0-ci4507452544" />
-    <PackageReference Include="FFImageLoading.Compat" Version="3.999.0-ci4507452544" />
-    <PackageReference Include="FFImageLoading.Compat.Svg.Maui" Version="3.999.0-ci4507452544" />
-    <PackageReference Include="FFImageLoading.Transformations" Version="3.999.0-ci4507452544" />
     <PackageReference Include="Shiny.Core" Version="3.0.0-alpha-0560" />
     <PackageReference Include="Shiny" Version="3.0.0-alpha-0002" />
     <PackageReference Include="Plugin.Permissions" Version="6.0.1" />
     <PackageReference Include="Shiny.Framework" Version="3.0.0-alpha-0065" />
+    <PackageReference Include="FFImageLoadingCompat" Version="0.1.1" />
+    <PackageReference Include="FFImageLoadingCompat.Maui" Version="0.1.1" />
+    <PackageReference Include="FFImageLoadingCompat.Transformations" Version="0.1.1" />
+    <PackageReference Include="FFImageLoadingCompat.Svg" Version="0.1.1" />
+    <PackageReference Include="FFImageLoadingCompat.Svg.Maui" Version="0.1.1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Naxam.Mapbox.Forms\Naxam.Mapbox.Forms.csproj" />

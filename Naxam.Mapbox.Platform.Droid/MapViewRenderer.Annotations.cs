@@ -12,9 +12,15 @@ using Naxam.Mapbox;
 using Naxam.Mapbox.Annotations;
 using Naxam.Mapbox.Platform.Droid.Extensions;
 using Microsoft.Maui;
-using Microsoft.Maui.Controls;
-using Xamarin.Forms.Platform.Android;
+//using Microsoft.Maui.Controls;
+using Microsoft.Maui.Controls.Compatibility.Platform.Android;
+using Microsoft.Maui.Controls.Platform.Compatibility;
+using Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;
 using NxAnnotation = Naxam.Mapbox.Annotations.Annotation;
+using Microsoft.Maui.Controls;
+using GeoJSON.Net.Feature;
+using Microsoft.Maui.Graphics;
+using Microsoft.Maui.Controls.Shapes;
 
 namespace Naxam.Controls.Mapbox.Platform.Droid
 {
@@ -166,6 +172,11 @@ namespace Naxam.Controls.Mapbox.Platform.Droid
                 Element.DidTapOnMarkerCommand.Execute(symbol.Id.ToString());
             }
         }
+
+        bool IOnSymbolClickListener.OnAnnotationClick(Symbol symbol)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 
     public partial class MapViewRenderer : IMapFunctions
@@ -204,6 +215,21 @@ namespace Naxam.Controls.Mapbox.Platform.Droid
             var bitmap = iconImageSource.Source.GetBitmap(Context);
 
             mapStyle.AddImage(iconImageSource.Id, bitmap, iconImageSource.IsTemplate);
+        }
+
+        public Feature[] QueryFeatures(Point position, params string[] layers)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Feature[] QueryFeatures(Point position, float radius, params string[] layers)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Feature[] QueryFeatures(Rectangle rectangle, params string[] layers)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

@@ -2,6 +2,7 @@
 using Naxam.Mapbox.Annotations;
 using Java.Lang;
 using System.Linq;
+using Microsoft.Maui.Controls.Compatibility.Platform.Android;
 
 namespace Naxam.Controls.Mapbox.Platform.Droid
 {
@@ -15,17 +16,17 @@ namespace Naxam.Controls.Mapbox.Platform.Droid
             {
                 symbolOptions.WithIconImage(symbolAnnotation.IconAnchor);
             }
-            if (symbolAnnotation.IconColor.HasValue)
+            if (symbolAnnotation.IconColor != null)
             {
-                symbolOptions.WithIconColor(symbolAnnotation.IconColor.Value.ToRGBAString());
+                symbolOptions.WithIconColor(symbolAnnotation.IconColor.ToRGBAString());
             }
             if (symbolAnnotation.IconHaloBlur.HasValue)
             {
                 symbolOptions.WithIconHaloBlur(new Float(symbolAnnotation.IconHaloBlur.Value));
             }
-            if (symbolAnnotation.IconHaloColor.HasValue)
+            if (symbolAnnotation.IconHaloColor != null)
             {
-                symbolOptions.WithIconHaloColor(symbolAnnotation.IconHaloColor.Value.ToRGBAString());
+                symbolOptions.WithIconHaloColor(symbolAnnotation.IconHaloColor.ToRGBAString());
             }
             if (symbolAnnotation.IconHaloWidth.HasValue)
             {
@@ -63,9 +64,9 @@ namespace Naxam.Controls.Mapbox.Platform.Droid
             {
                 symbolOptions.WithTextAnchor(symbolAnnotation.TextAnchor);
             }
-            if (symbolAnnotation.TextColor.HasValue)
+            if (symbolAnnotation.TextColor != null)
             {
-                symbolOptions.WithTextColor(symbolAnnotation.TextColor.Value.ToRGBAString());
+                symbolOptions.WithTextColor(symbolAnnotation.TextColor.ToRGBAString());
             }
             if (!string.IsNullOrWhiteSpace(symbolAnnotation.TextField))
             {
@@ -79,9 +80,9 @@ namespace Naxam.Controls.Mapbox.Platform.Droid
             {
                 symbolOptions.WithTextHaloBlur(new Float(symbolAnnotation.TextHaloBlur.Value));
             }
-            if (symbolAnnotation.TextHaloColor.HasValue)
+            if (symbolAnnotation.TextHaloColor != null)
             {
-                symbolOptions.WithTextHaloColor(symbolAnnotation.TextHaloColor.Value.ToRGBAString());
+                symbolOptions.WithTextHaloColor(symbolAnnotation.TextHaloColor.ToRGBAString());
             }
             if (symbolAnnotation.TextHaloWidth.HasValue)
             {
@@ -132,14 +133,14 @@ namespace Naxam.Controls.Mapbox.Platform.Droid
             if (!string.IsNullOrWhiteSpace(symbolAnnotation.IconAnchor)) {
                 symbol.IconImage = symbolAnnotation.IconAnchor;
             }
-            if (symbolAnnotation.IconColor.HasValue) {
-                symbol.IconColor = symbolAnnotation.IconColor.Value.ToRGBAString();
+            if (symbolAnnotation.IconColor != null) {
+                symbol.IconColor = symbolAnnotation.IconColor.ToRGBAString();
             }
             if (symbolAnnotation.IconHaloBlur.HasValue) {
                 symbol.IconHaloBlur = new Float(symbolAnnotation.IconHaloBlur.Value);
             }
-            if (symbolAnnotation.IconHaloColor.HasValue) {
-                symbol.IconHaloColor = symbolAnnotation.IconHaloColor.Value.ToRGBAString();
+            if (symbolAnnotation.IconHaloColor != null) {
+                symbol.IconHaloColor = symbolAnnotation.IconHaloColor.ToRGBAString();
             }
             if (symbolAnnotation.IconHaloWidth.HasValue) {
                 symbol.IconHaloWidth = new Float(symbolAnnotation.IconHaloWidth.Value);
@@ -170,8 +171,8 @@ namespace Naxam.Controls.Mapbox.Platform.Droid
             if (!string.IsNullOrWhiteSpace(symbolAnnotation.TextAnchor)) {
                 symbol.TextAnchor = (symbolAnnotation.TextAnchor);
             }
-            if (symbolAnnotation.TextColor.HasValue) {
-                symbol.TextColor = (symbolAnnotation.TextColor.Value.ToRGBAString());
+            if (symbolAnnotation.TextColor != null) {
+                symbol.TextColor = (symbolAnnotation.TextColor.ToRGBAString());
             }
             if (!string.IsNullOrWhiteSpace(symbolAnnotation.TextField)) {
                 symbol.TextField = (symbolAnnotation.TextField);
@@ -182,8 +183,8 @@ namespace Naxam.Controls.Mapbox.Platform.Droid
             if (symbolAnnotation.TextHaloBlur.HasValue) {
                 symbol.TextHaloBlur = (new Float(symbolAnnotation.TextHaloBlur.Value));
             }
-            if (symbolAnnotation.TextHaloColor.HasValue) {
-                symbol.TextHaloColor = (symbolAnnotation.TextHaloColor.Value.ToRGBAString());
+            if (symbolAnnotation.TextHaloColor != null) {
+                symbol.TextHaloColor = (symbolAnnotation.TextHaloColor.ToRGBAString());
             }
             if (symbolAnnotation.TextHaloWidth.HasValue) {
                 symbol.TextHaloWidth = (new Float(symbolAnnotation.TextHaloWidth.Value));

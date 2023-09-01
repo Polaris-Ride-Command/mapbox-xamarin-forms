@@ -1,4 +1,383 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <UseMaui>true</UseMaui>
+    <TargetFramework>net7.0-android</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\antony.png">
+      <SubType>Designer</SubType>
+      <Generator>
+      </Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\carlos.png">
+      <SubType>Designer</SubType>
+      <Generator>
+      </Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\luciana.png">
+      <SubType>Designer</SubType>
+      <Generator>
+      </Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\maria.png">
+      <SubType>Designer</SubType>
+      <Generator>
+      </Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\antony.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\carlos.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\luciana.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\maria.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\miami_beach.png">
+      <SubType>Designer</SubType>
+      <Generator>
+      </Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\southeast_radar_0.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\southeast_radar_1.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\southeast_radar_2.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\southeast_radar_3.png" />
+    <AndroidResource Include="Resources\layout\Tabbar.axml" />
+    <AndroidResource Include="Resources\layout\Toolbar.axml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\drawable\icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\naxam_copyright.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\naxam_copyright.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\naxam_copyright.png" />
+    <AndroidResource Include="Resources\drawable\bg_splash.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable\pin.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\red_marker.png">
+      <SubType>
+      </SubType>
+      <Generator>
+      </Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\ic_cross_x.xml">
+      <SubType>
+      </SubType>
+      <Generator>
+      </Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\catsvc_gasbottles.png">
+      <SubType>
+      </SubType>
+      <Generator>
+      </Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\pink_dot.png">
+      <SubType>
+      </SubType>
+      <Generator>
+      </Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\xml\file_paths.xml" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_cross.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\earthquake_triangle.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\single_quake_icon.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\blue_marker.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\southeast_radar_3.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\southeast_radar_2.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\southeast_radar_1.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\southeast_radar_0.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\single_quake_icon.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\red_marker.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\pink_dot.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\miami_beach.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_cross.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\earthquake_triangle.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\catsvc_gasbottles.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\blue_marker_view.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\blue_marker.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-mdpi\icon.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-mdpi\southeast_radar_3.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-mdpi\southeast_radar_2.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-mdpi\southeast_radar_1.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-mdpi\southeast_radar_0.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-mdpi\single_quake_icon.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-mdpi\red_marker.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-mdpi\pink_dot.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-mdpi\miami_beach.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-mdpi\maria.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-mdpi\luciana.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_cross.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-mdpi\earthquake_triangle.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-mdpi\catsvc_gasbottles.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-mdpi\carlos.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-mdpi\blue_marker_view.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-mdpi\blue_marker.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-mdpi\antony.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\southeast_radar_3.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\southeast_radar_2.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\southeast_radar_1.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\southeast_radar_0.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\single_quake_icon.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\red_marker.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\pink_dot.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\naxam_copyright.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\miami_beach.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\maria.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\luciana.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_cross.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\earthquake_triangle.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\catsvc_gasbottles.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\carlos.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\blue_marker_view.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\blue_marker.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\antony.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_main.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\indoor-3d-map.geojson" />
+    <AndroidAsset Include="Assets\local_style_file.json" />
+    <AndroidAsset Include="Assets\marathon_route.geojson" />
+    <AndroidAsset Include="Assets\materialdesignicons-webfont.ttf" />
+    <AndroidAsset Include="Assets\poi_places.geojson" />
+    <AndroidAsset Include="Assets\ports.geojson" />
+    <AndroidAsset Include="Assets\us_west_coast.geojson" />
+    <AndroidAsset Include="Assets\la_heatmap_styling_points.geojson" />
+    <AndroidAsset Include="Assets\bathymetry-data.geojson" />
+    <AndroidAsset Include="Assets\golden_gate_lines.geojson" />
+    <AndroidAsset Include="Assets\fake_norway_campsites.geojson" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\blue_marker_view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\no_bg_style.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MapBoxQs\MapBoxQs.csproj" />
+    <ProjectReference Include="..\..\Naxam.Mapbox.Forms\Naxam.Mapbox.Forms.csproj" />
+    <ProjectReference Include="..\..\Naxam.Mapbox.Platform.Droid\Naxam.Mapbox.Platform.Droid.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="com.mapbox.mapboxsdk.mapbox_android_accounts">
+      <HintPath>..\..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_android_accounts.dll</HintPath>
+    </Reference>
+    <Reference Include="com.mapbox.mapboxsdk.mapbox_android_core">
+      <HintPath>..\..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_android_core.dll</HintPath>
+    </Reference>
+    <Reference Include="com.mapbox.mapboxsdk.mapbox_android_gestures">
+      <HintPath>..\..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_android_gestures.dll</HintPath>
+    </Reference>
+    <Reference Include="com.mapbox.mapboxsdk.mapbox_android_plugin_annotation">
+      <HintPath>..\..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_android_plugin_annotation.dll</HintPath>
+    </Reference>
+    <Reference Include="com.mapbox.mapboxsdk.mapbox_android_plugin_building">
+      <HintPath>..\..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_android_plugin_building.dll</HintPath>
+    </Reference>
+    <Reference Include="com.mapbox.mapboxsdk.mapbox_android_plugin_traffic">
+      <HintPath>..\..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_android_plugin_traffic.dll</HintPath>
+    </Reference>
+    <Reference Include="com.mapbox.mapboxsdk.mapbox_android_sdk">
+      <HintPath>..\..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_android_sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="com.mapbox.mapboxsdk.mapbox_android_sdk_gl_core">
+      <HintPath>..\..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_android_sdk_gl_core.dll</HintPath>
+    </Reference>
+    <Reference Include="com.mapbox.mapboxsdk.mapbox_android_telemetry">
+      <HintPath>..\..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_android_telemetry.dll</HintPath>
+    </Reference>
+    <Reference Include="com.mapbox.mapboxsdk.mapbox_sdk_geojson">
+      <HintPath>..\..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_sdk_geojson.dll</HintPath>
+    </Reference>
+    <Reference Include="com.mapbox.mapboxsdk.mapbox_sdk_turf">
+      <HintPath>..\..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_sdk_turf.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+   <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs" Version="8.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Mopups" Version="1.1.1" />
+    <PackageReference Include="Splat" Version="14.6.8" />
+    <PackageReference Include="Xam.Plugin.Media" Version="6.0.1-beta" />
+    <PackageReference Include="GeoJSON.Net" Version="1.3.6-rc" />
+    <PackageReference Include="Shiny.Net.Http" Version="3.0.0-alpha-0560" />
+    <PackageReference Include="FFImageLoadingCompat" Version="0.1.1" />
+    <PackageReference Include="FFImageLoadingCompat.Maui" Version="0.1.1" />
+    <PackageReference Include="FFImageLoadingCompat.Transformations" Version="0.1.1" />
+    <PackageReference Include="FFImageLoadingCompat.Svg" Version="0.1.1" />
+    <PackageReference Include="FFImageLoadingCompat.Svg.Maui" Version="0.1.1" />
+    <PackageReference Include="Shiny.Jobs" Version="3.0.0-alpha-0560" />
+  </ItemGroup>
+
+</Project><!--<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -44,17 +423,7 @@
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Core" />
-    <Reference Include="Mono.Android" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.IO.Compression" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="Java.Interop" />
-    <Reference Include="System.IdentityModel" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Xml.Linq" />
+
     <PackageReference Include="Acr.Support">
       <Version>2.1.0</Version>
     </PackageReference>
@@ -79,18 +448,14 @@
     <PackageReference Include="Xamarin.GooglePlayServices.Location">
       <Version>71.1600.0</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms">
-      <Version>4.2.0.778463</Version>
-    </PackageReference>
+
     <PackageReference Include="SkiaSharp">
       <Version>1.68.0</Version>
     </PackageReference>
     <PackageReference Include="Splat">
       <Version>8.3.1</Version>
     </PackageReference>
-    <PackageReference Include="Naxam.Mapbox.Droid">
-      <Version>8.4.0</Version>
-    </PackageReference>
+
     <PackageReference Include="Xamarin.Android.Support.Annotations">
       <Version>28.0.0.3</Version>
     </PackageReference>
@@ -112,38 +477,15 @@
     <PackageReference Include="GeoJSON.Net">
       <Version>1.1.73</Version>
     </PackageReference>
-    <PackageReference Include="Naxam.MapboxGestures.Droid">
-      <Version>0.5.1.1</Version>
-    </PackageReference>
-    <PackageReference Include="Naxam.MapboxAccounts.Droid">
-      <Version>0.2.0</Version>
-    </PackageReference>
-    <PackageReference Include="Naxam.SoLoader.Droid">
-      <Version>0.6.1.2</Version>
-    </PackageReference>
-    <PackageReference Include="Naxam.MapboxSdkTurf.Droid">
-      <Version>4.9.0</Version>
-    </PackageReference>
-    <PackageReference Include="Naxam.MapboxSdkGeojson.Droid">
-      <Version>4.9.0</Version>
-    </PackageReference>
-    <PackageReference Include="Naxam.Mapbox.Services.Android.Telemetry">
-      <Version>4.5.1</Version>
-    </PackageReference>
+   
     <PackageReference Include="Square.OkHttp3">
       <Version>3.12.3</Version>
     </PackageReference>
-    <Reference Include="Mono.Android.Export" />
-    <PackageReference Include="Shiny.Net.Http">
-      <Version>1.0.0.400-beta</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Essentials">
-      <Version>1.3.1</Version>
-    </PackageReference>
+
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Naxam.Mapbox.Platform.Droid\Naxam.Mapbox.Platform.Droid.csproj">
-      <Project>{E4589CB9-67C1-46BA-A464-4B543D5E732A}</Project>
+      <Project>{FD443498-89A8-40FA-9739-C8C69C5B2F87}</Project>
       <Name>Naxam.Mapbox.Platform.Droid</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Naxam.Mapbox.Forms\Naxam.Mapbox.Forms.csproj">
@@ -151,7 +493,7 @@
       <Name>Naxam.Mapbox.Forms</Name>
     </ProjectReference>
     <ProjectReference Include="..\MapBoxQs\MapBoxQs.csproj">
-      <Project>{85e7ee45-a434-481b-8777-b6ac6f986f24}</Project>
+      <Project>{033CD98C-C439-4F89-ADD5-2E0D8A68C7B6}</Project>
       <Name>MapBoxQs</Name>
     </ProjectReference>
   </ItemGroup>
@@ -477,4 +819,4 @@
     <AndroidAsset Include="Assets\no_bg_style.json" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
-</Project>
+</Project>-->
