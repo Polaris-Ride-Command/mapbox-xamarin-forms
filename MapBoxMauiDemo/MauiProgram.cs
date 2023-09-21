@@ -1,4 +1,5 @@
 ﻿using Android.Content;
+using Com.Mapbox.Mapboxsdk;
 using MapboxMauiDemo.Services;
 using Microsoft.Extensions.Logging;
 #if IOS
@@ -35,6 +36,7 @@ public static class MauiProgram
 #endif
 
 #if ANDROID
+		Mapbox.AccessToken = MapBoxService.AccessToken;
         builder.UseNaxamFormsDroid();
 #endif
 

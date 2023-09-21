@@ -6,6 +6,7 @@
     <AssemblyName>Naxam.Mapbox.Platform.Droid</AssemblyName>
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
       <UseMaui>true</UseMaui>
+        <OutputType>Library</OutputType>
   </PropertyGroup>
 
 
@@ -34,6 +35,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Naxam.Mapbox.Forms\Naxam.Mapbox.Forms.csproj" />
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="com.mapbox.mapboxsdk.mapbox_android_accounts">

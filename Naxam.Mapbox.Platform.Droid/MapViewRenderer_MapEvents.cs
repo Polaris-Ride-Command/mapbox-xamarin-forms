@@ -16,7 +16,7 @@ namespace Naxam.Controls.Mapbox.Platform.Droid
 
         protected virtual void AddMapEvents()
         {
-            //map.MarkerClick += MarkerClicked;
+            map.MarkerClick += MarkerClicked;
             //map.InfoWindowClick += InfoWindowClick;
             //map.MapClick += MapClicked;
             map.AddOnMapClickListener(this);

@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
-using Com.Mapbox.Mapboxsdk;
+//using Com.Mapbox.Mapboxsdk;
 using MapboxMauiDemo.Services;
 
 namespace MapboxMauiDemo;
@@ -13,10 +13,10 @@ public class MainActivity : MauiAppCompatActivity
     {
         base.OnCreate(savedInstanceState, persistentState);
 
-        Com.Mapbox.Mapboxsdk.Mapbox.GetInstance(this, MapBoxService.AccessToken);
-        Com.Mapbox.Mapboxsdk.Mapbox.Telemetry.SetDebugLoggingEnabled(true);
+        //Com.Mapbox.Mapboxsdk.Mapbox.GetInstance(this, MapBoxService.AccessToken);
+        //Com.Mapbox.Mapboxsdk.Mapbox.Telemetry.SetDebugLoggingEnabled(true);
 
-        System.Diagnostics.Debug.WriteLine("Mapbox version: " + Com.Mapbox.Mapboxsdk.BuildConfig.MAPBOX_VERSION_STRING);
+        //System.Diagnostics.Debug.WriteLine("Mapbox version: " + Com.Mapbox.Mapboxsdk.BuildConfig.MAPBOX_VERSION_STRING);
 
     }
 }

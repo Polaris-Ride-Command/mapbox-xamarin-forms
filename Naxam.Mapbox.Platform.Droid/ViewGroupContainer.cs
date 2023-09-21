@@ -13,9 +13,11 @@ using Com.Mapbox.Mapboxsdk.Annotations;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 using Naxam.Controls.Platform.Droid.Utils;
-using Microsoft.Maui.Controls.Compatibility.Platform.Android;
+//using Microsoft.Maui.Controls.Compatibility.Platform.Android;
+using Microsoft.Maui.Controls.Compatibility.Platform.Android.AppCompat;
 using Microsoft.Maui.Platform;
 using Microsoft.Maui.Graphics;
+using Microsoft.Maui.Controls.Compatibility.Platform.Android;
 
 namespace Naxam.Mapbox.Platform.Droid
 {
