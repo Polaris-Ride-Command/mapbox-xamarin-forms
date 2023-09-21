@@ -10,11 +10,6 @@
 	  <CreatePackage>false</CreatePackage>
 	</PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="GeoJSON.Net" Version="1.2.19">
-    </PackageReference>
-  </ItemGroup>
-  
-  <ItemGroup>
     <ProjectReference Include="..\Naxam.Mapbox.Forms\Naxam.Mapbox.Forms.csproj" />
   </ItemGroup>
   <ItemGroup>
@@ -22,5 +17,8 @@
     <Reference Include="Naxam.Mapbox.iOS">
       <HintPath>..\..\mapbox-ios-binding\output\Naxam.Mapbox.iOS.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="GeoJSON.Net" Version="1.2.19" />
   </ItemGroup>
 </Project>

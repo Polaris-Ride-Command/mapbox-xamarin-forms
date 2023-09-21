@@ -1,5 +1,9 @@
 ﻿using System;
-using MapBoxQs.iOS;
+using Android.App;
+using Android.Runtime;
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using MapBoxQs.Droid;
 
 namespace MapBoxQs.Droid
 {
@@ -13,6 +17,5 @@ namespace MapBoxQs.Droid
 
         protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
     }
-
 
 }

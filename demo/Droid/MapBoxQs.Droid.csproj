@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <UseMaui>true</UseMaui>
     <TargetFramework>net7.0-android</TargetFramework>
     <OutputType>Exe</OutputType>
+    <UseMaui>true</UseMaui>
     <ImplicitUsings>enable</ImplicitUsings>
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
   </PropertyGroup>
@@ -378,6 +378,8 @@
     <PackageReference Include="Xamarin.AndroidX.Browser" Version="1.5.0.3" />
     <PackageReference Include="Xamarin.Google.Android.Material" Version="1.9.0.2" />
     <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.19" />
+    <PackageReference Include="Square.OkHttp3" Version="4.11.0.2" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Location" Version="121.0.1.1" />
   </ItemGroup>
 
 </Project>

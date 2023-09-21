@@ -10,14 +10,12 @@ using static Com.Mapbox.Mapboxsdk.Maps.MapboxMap;
 using Android.Views;
 using Android.Widget;
 using Android.Content;
-using Android.Support.V4.Content;
 using Android.Runtime;
 using Android.Graphics;
 using MapBoxQs.Views;
-using Plugin.CurrentActivity;
 namespace MapBoxQs.Droid
 {
-    [Activity(Label = "MapBoxQs.Droid", Icon = "@mipmap/ic_launcher", Theme = "@style/MyTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Theme = "@style/Maui.SplashTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize | ConfigChanges.Density)]
     public class MainActivity : MauiAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)

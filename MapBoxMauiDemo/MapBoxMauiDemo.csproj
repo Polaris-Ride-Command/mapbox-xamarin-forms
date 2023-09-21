@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net7.0-android;net7.0-ios</TargetFrameworks>
+		<TargetFrameworks>net7.0-android</TargetFrameworks>
 		<OutputType>Exe</OutputType>
 		<RootNamespace>MapboxMauiDemo</RootNamespace>
 		<UseMaui>true</UseMaui>
@@ -49,57 +49,18 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 		<PackageReference Include="GeoJSON.Net" Version="1.3.6-rc" />
-	</ItemGroup>
+		<PackageReference Include="Square.OkHttp3" Version="4.11.0.2" />
 
-	<ItemGroup>
-	  <Reference Include="Naxam.Mapbox.Forms">
-	    <HintPath>..\Naxam.Mapbox.Forms\bin\Debug\net7.0-ios\Naxam.Mapbox.Forms.dll</HintPath>
-	  </Reference>
-	  <Reference Include="Naxam.Mapbox.iOS">
-	    <HintPath>..\..\mapbox-ios-binding\Naxam.Mapbox.iOS\bin\Debug\net7.0-ios\Naxam.Mapbox.iOS.dll</HintPath>
-	  </Reference>
-	  <Reference Include="Naxam.Mapbox.Platform.iOS">
-	    <HintPath>..\Naxam.Mapbox.Platform.iOS\bin\Debug\net7.0-ios\Naxam.Mapbox.Platform.iOS.dll</HintPath>
-	  </Reference>
-	  <Reference Include="Naxam.Mapbox.Platform.Droid">
-	    <HintPath>..\Naxam.Mapbox.Platform.Droid\bin\Debug\net7.0-android\Naxam.Mapbox.Platform.Droid.dll</HintPath>
-	  </Reference>
-	    <Reference Include="com.mapbox.mapboxsdk.mapbox_android_accounts">
-	    <HintPath>..\Naxam.Mapbox.Platform.Droid\bin\Debug\net7.0-android\com.mapbox.mapboxsdk.mapbox_android_accounts.dll</HintPath>
-	  </Reference>
-	  <Reference Include="com.mapbox.mapboxsdk.mapbox_android_core">
-	    <HintPath>..\Naxam.Mapbox.Platform.Droid\bin\Debug\net7.0-android\com.mapbox.mapboxsdk.mapbox_android_core.dll</HintPath>
-	  </Reference>
-	  <Reference Include="com.mapbox.mapboxsdk.mapbox_android_gestures">
-	    <HintPath>..\Naxam.Mapbox.Platform.Droid\bin\Debug\net7.0-android\com.mapbox.mapboxsdk.mapbox_android_gestures.dll</HintPath>
-	  </Reference>
-	  <Reference Include="com.mapbox.mapboxsdk.mapbox_android_plugin_annotation">
-	    <HintPath>..\Naxam.Mapbox.Platform.Droid\bin\Debug\net7.0-android\com.mapbox.mapboxsdk.mapbox_android_plugin_annotation.dll</HintPath>
-	  </Reference>
-	  <Reference Include="com.mapbox.mapboxsdk.mapbox_android_plugin_building">
-	    <HintPath>..\Naxam.Mapbox.Platform.Droid\bin\Debug\net7.0-android\com.mapbox.mapboxsdk.mapbox_android_plugin_building.dll</HintPath>
-	  </Reference>
-	  <Reference Include="com.mapbox.mapboxsdk.mapbox_android_plugin_traffic">
-	    <HintPath>..\Naxam.Mapbox.Platform.Droid\bin\Debug\net7.0-android\com.mapbox.mapboxsdk.mapbox_android_plugin_traffic.dll</HintPath>
-	  </Reference>
-	  <Reference Include="com.mapbox.mapboxsdk.mapbox_android_sdk_gl_core">
-	    <HintPath>..\Naxam.Mapbox.Platform.Droid\bin\Debug\net7.0-android\com.mapbox.mapboxsdk.mapbox_android_sdk_gl_core.dll</HintPath>
-	  </Reference>
-	  <Reference Include="com.mapbox.mapboxsdk.mapbox_android_sdk">
-	    <HintPath>..\Naxam.Mapbox.Platform.Droid\bin\Debug\net7.0-android\com.mapbox.mapboxsdk.mapbox_android_sdk.dll</HintPath>
-	  </Reference>
-	  <Reference Include="com.mapbox.mapboxsdk.mapbox_android_telemetry">
-	    <HintPath>..\Naxam.Mapbox.Platform.Droid\bin\Debug\net7.0-android\com.mapbox.mapboxsdk.mapbox_android_telemetry.dll</HintPath>
-	  </Reference>
-	  <Reference Include="com.mapbox.mapboxsdk.mapbox_sdk_geojson">
-	    <HintPath>..\Naxam.Mapbox.Platform.Droid\bin\Debug\net7.0-android\com.mapbox.mapboxsdk.mapbox_sdk_geojson.dll</HintPath>
-	  </Reference>
-	  <Reference Include="com.mapbox.mapboxsdk.mapbox_sdk_turf">
-	    <HintPath>..\Naxam.Mapbox.Platform.Droid\bin\Debug\net7.0-android\com.mapbox.mapboxsdk.mapbox_sdk_turf.dll</HintPath>
-	  </Reference>
-<!--	  <Reference Include="Naxam.Mapbox.Forms">
-	    <HintPath>..\Naxam.Mapbox.Platform.Droid\bin\Debug\net7.0-android\Naxam.Mapbox.Forms.dll</HintPath>
-	  </Reference>-->
+    <PackageReference Include="Xamarin.GooglePlayServices.Location" Version="121.0.1.1" />
+    <PackageReference Include="Xamarin.AndroidX.Annotation" Version="1.6.0.4" />
+    <PackageReference Include="Xamarin.AndroidX.Core" Version="1.10.1.2" />
+    <PackageReference Include="Xamarin.Google.Android.Material" Version="1.9.0.2" />
+    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.Core.Utils" Version="1.0.0.19" />
+    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.19" />
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.6.1.3" />
+    <PackageReference Include="Xamarin.AndroidX.MediaRouter" Version="1.4.0.2" />
+    <PackageReference Include="Xamarin.AndroidX.Palette" Version="1.0.0.19" />
+    <PackageReference Include="Xamarin.AndroidX.Browser" Version="1.5.0.3" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -111,4 +72,43 @@
 	  <Folder Include="Dtos\" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\Naxam.Mapbox.Forms\Naxam.Mapbox.Forms.csproj" />
+	  <ProjectReference Include="..\Naxam.Mapbox.Platform.Droid\Naxam.Mapbox.Platform.Droid.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Reference Include="com.mapbox.mapboxsdk.mapbox_android_accounts">
+	    <HintPath>..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_android_accounts.dll</HintPath>
+	  </Reference>
+	  <Reference Include="com.mapbox.mapboxsdk.mapbox_android_core">
+	    <HintPath>..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_android_core.dll</HintPath>
+	  </Reference>
+	  <Reference Include="com.mapbox.mapboxsdk.mapbox_android_gestures">
+	    <HintPath>..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_android_gestures.dll</HintPath>
+	  </Reference>
+	  <Reference Include="com.mapbox.mapboxsdk.mapbox_android_plugin_annotation">
+	    <HintPath>..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_android_plugin_annotation.dll</HintPath>
+	  </Reference>
+	  <Reference Include="com.mapbox.mapboxsdk.mapbox_android_plugin_building">
+	    <HintPath>..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_android_plugin_building.dll</HintPath>
+	  </Reference>
+	  <Reference Include="com.mapbox.mapboxsdk.mapbox_android_plugin_traffic">
+	    <HintPath>..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_android_plugin_traffic.dll</HintPath>
+	  </Reference>
+	  <Reference Include="com.mapbox.mapboxsdk.mapbox_android_sdk_gl_core">
+	    <HintPath>..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_android_sdk_gl_core.dll</HintPath>
+	  </Reference>
+	  <Reference Include="com.mapbox.mapboxsdk.mapbox_android_sdk">
+	    <HintPath>..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_android_sdk.dll</HintPath>
+	  </Reference>
+	  <Reference Include="com.mapbox.mapboxsdk.mapbox_android_telemetry">
+	    <HintPath>..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_android_telemetry.dll</HintPath>
+	  </Reference>
+	  <Reference Include="com.mapbox.mapboxsdk.mapbox_sdk_geojson">
+	    <HintPath>..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_sdk_geojson.dll</HintPath>
+	  </Reference>
+	  <Reference Include="com.mapbox.mapboxsdk.mapbox_sdk_turf">
+	    <HintPath>..\..\mapbox-android-binding\output\com.mapbox.mapboxsdk.mapbox_sdk_turf.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
 </Project>
