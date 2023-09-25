@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MapBoxQs.Droid", "Droid\MapBoxQs.Droid.csproj", "{20BD1528-0822-49E2-B2F1-8C6E43DAC025}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MapBoxQs", "MapBoxQs\MapBoxQs.csproj", "{21004CBF-E87A-4B83-A614-E79B87501C73}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MapBoxQs.iOS", "iOS\MapBoxQs.iOS.csproj", "{7AFC6457-02FC-4344-9868-ACF4A44968C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20BD1528-0822-49E2-B2F1-8C6E43DAC025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20BD1528-0822-49E2-B2F1-8C6E43DAC025}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20BD1528-0822-49E2-B2F1-8C6E43DAC025}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20BD1528-0822-49E2-B2F1-8C6E43DAC025}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21004CBF-E87A-4B83-A614-E79B87501C73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21004CBF-E87A-4B83-A614-E79B87501C73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21004CBF-E87A-4B83-A614-E79B87501C73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21004CBF-E87A-4B83-A614-E79B87501C73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AFC6457-02FC-4344-9868-ACF4A44968C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AFC6457-02FC-4344-9868-ACF4A44968C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AFC6457-02FC-4344-9868-ACF4A44968C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AFC6457-02FC-4344-9868-ACF4A44968C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DFFF70B1-AFE3-4FE9-B6F2-9F894D1B1708}
+	EndGlobalSection
+EndGlobal
