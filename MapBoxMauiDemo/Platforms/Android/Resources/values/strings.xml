@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+	<string name="hello">Hello World, Click Me!</string>
+	<string name="access_token">pk.eyJ1IjoibmF4YW10ZXN0IiwiYSI6ImNqNWtpaG1oYTJqZmQyd28yM2tsdDhucmEifQ.Zr35ENq9tziBBDAbdeU2dw</string>
+</resources>

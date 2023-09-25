@@ -2,8 +2,8 @@
 using Com.Mapbox.Mapboxsdk.Style.Light;
 using Com.Mapbox.Mapboxsdk.Utils;
 using Naxam.Mapbox.Layers;
-using Xamarin.Forms.Platform.Android;
 using Light = Naxam.Mapbox.Light;
+using Microsoft.Maui.Controls.Compatibility.Platform.Android;
 
 namespace Naxam.Controls.Mapbox.Platform.Droid
 {
@@ -90,7 +90,7 @@ namespace Naxam.Controls.Mapbox.Platform.Droid
 
             if (light.Color != null)
             {
-                native.Color = ColorUtils.ColorToRgbaString(light.Color.Value.ToAndroid());
+                native.Color = ColorUtils.ColorToRgbaString(light.Color.ToAndroid());
             }
 
             if (light.ColorTransition != null)

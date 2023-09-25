@@ -5,7 +5,6 @@ using Com.Mapbox.Mapboxsdk.Plugins.Building;
 using Com.Mapbox.Mapboxsdk.Plugins.Traffic;
 using Naxam.Controls.Forms;
 using Naxam.Mapbox;
-using Xamarin.Forms.Platform.Android;
 using Sdk = Com.Mapbox.Mapboxsdk;
 
 namespace Naxam.Controls.Mapbox.Platform.Droid

@@ -8,7 +8,6 @@ using GoogleGson;
 using Naxam.Controls.Forms;
 using Naxam.Mapbox.Platform.Droid.Offline;
 
-[assembly: Xamarin.Forms.Dependency(typeof(Naxam.Controls.Mapbox.Platform.Droid.OfflineStorageService))]
 namespace Naxam.Controls.Mapbox.Platform.Droid
 {
     public class OfflineStorageService : IOfflineStorageService

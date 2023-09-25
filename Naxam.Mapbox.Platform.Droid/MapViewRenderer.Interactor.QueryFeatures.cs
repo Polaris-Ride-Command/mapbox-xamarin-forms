@@ -7,7 +7,10 @@ using NFeature = GeoJSON.Net.Feature.Feature;
 using Naxam.Mapbox.Platform.Droid.Extensions;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
-using Xamarin.Forms.Platform.Android;
+using Microsoft.Maui.Controls.Compatibility.Platform.Android;
+//using Microsoft.Maui.Controls.Compatibility.Platform.Android.AppCompat;
+using Microsoft.Maui.Platform;
+using Android.Graphics;
 
 namespace Naxam.Controls.Mapbox.Platform.Droid
 {
@@ -68,7 +71,7 @@ namespace Naxam.Controls.Mapbox.Platform.Droid
             return features.Select(f => f.ToFeature(true)).ToArray();
         }
 
-        public NFeature[] QueryFeatures(Rectangle rectangle, params string[] layers)
+        public NFeature[] QueryFeatures(Rect rectangle, params string[] layers)
         {
             var region = rectangle.ToRectF();
             var features = map.QueryRenderedFeatures(region, layers);

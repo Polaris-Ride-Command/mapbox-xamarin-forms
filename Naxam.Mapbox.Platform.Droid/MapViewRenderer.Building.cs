@@ -4,7 +4,8 @@ using System.Linq;
 using Com.Mapbox.Mapboxsdk.Plugins.Building;
 using Naxam.Controls.Forms;
 using Naxam.Mapbox;
-using Xamarin.Forms.Platform.Android;
+using Microsoft.Maui.Controls.Compatibility.Platform.Android;
+using Microsoft.Maui.Controls.Compatibility.Platform.Android.AppCompat;
 using Sdk = Com.Mapbox.Mapboxsdk;
 
 namespace Naxam.Controls.Mapbox.Platform.Droid

@@ -10,7 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using AViews = Android.Views;
-using APlatform = Xamarin.Forms.Platform.Android.Platform;
+using APlatform = Microsoft.Maui.Controls.Compatibility.Platform.Android.Platform;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 using Application = Android.App.Application;
@@ -19,7 +19,7 @@ namespace Naxam.Mapbox.Platform.Droid.Extensions
 {
     public static class ViewExtensions
     {
-        public static AViews.View ToAndroid(this Xamarin.Forms.View view)
+        public static AViews.View ToAndroid(this Microsoft.Maui.Controls.View view)
         {
             if (APlatform.GetRenderer(view) == null)
                 APlatform.SetRenderer(view, APlatform.CreateRendererWithContext(view, Application.Context));

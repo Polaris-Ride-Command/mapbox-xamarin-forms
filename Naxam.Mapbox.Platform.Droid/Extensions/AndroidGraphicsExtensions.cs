@@ -24,7 +24,7 @@ namespace Naxam.Mapbox.Platform.Droid.Extensions
             );
         }
 
-        public static PointF ToPointF(this Xamarin.Forms.Point point)
+        public static PointF ToPointF(this Point point)
         {
             return new PointF(
                 (float)point.X,
@@ -32,7 +32,7 @@ namespace Naxam.Mapbox.Platform.Droid.Extensions
             );
         }
 
-        public static RectF ToRectF(this Xamarin.Forms.Rectangle rectangle)
+        public static RectF ToRectF(this Rect rectangle)
         {
             return new RectF(
                 (float)rectangle.Left,
